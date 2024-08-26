@@ -1,4 +1,4 @@
-// Baseado no exercício 4J, capítulo 3 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 4J, capÃ­tulo 3 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 #include <cmath>
@@ -19,7 +19,7 @@ int main(void)
 
     valor_final = pow((valor1 - valor2), 2);
 
-    std::cout << "Quadrado da diferença dos valores = " << valor_final << std::endl;
+    std::cout << "Quadrado da diferenÃ§a dos valores = " << valor_final << std::endl;
     std::cout << std::endl;
 
     std::cout << "Tecle <Enter> para encerrar... ";
