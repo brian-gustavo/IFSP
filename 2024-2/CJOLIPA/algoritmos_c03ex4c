@@ -1,4 +1,4 @@
-// Baseado no exercício 4C, capítulo 3 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 4C, capÃ­tulo 3 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 #include <cmath>
@@ -13,7 +13,7 @@ int main(void)
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
-    std::cout << "Informe a área da base: "; std::cin >> r;
+    std::cout << "Informe a Ã¡rea da base: "; std::cin >> r;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
