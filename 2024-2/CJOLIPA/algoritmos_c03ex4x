@@ -1,4 +1,4 @@
-// Baseado no exercício 4X, capítulo 3 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 4X, capÃ­tulo 3 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 #include <cmath>
@@ -17,7 +17,7 @@ int main(void)
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
-    std::cout << "Informe o índice: "; std::cin >> indice;
+    std::cout << "Informe o Ã­ndice: "; std::cin >> indice;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
