@@ -1,4 +1,4 @@
-// Baseado no exercício 3G, capítulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 3G, capÃ­tulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -8,23 +8,23 @@ int main(void)
 
     int a, b, c, d, r1, r2;
 
-    std::cout << "Informe um primeiro número: "; std::cin >> a;
+    std::cout << "Informe um primeiro nÃºmero: "; std::cin >> a;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
-    std::cout << "Informe um segundo número: "; std::cin >> b;
+    std::cout << "Informe um segundo nÃºmero: "; std::cin >> b;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
-    std::cout << "Informe um terceiro número: "; std::cin >> c;
+    std::cout << "Informe um terceiro nÃºmero: "; std::cin >> c;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
-    std::cout << "Informe um quarto número: "; std::cin >> d;
+    std::cout << "Informe um quarto nÃºmero: "; std::cin >> d;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
-    std::cout << "Valores divisíveis por 2 e 3: " << std::endl << std::endl;
+    std::cout << "Valores divisÃ­veis por 2 e 3: " << std::endl << std::endl;
 
     r1 = a - 2 * (a / 2);
     r2 = a - 3 * (a / 3);
