@@ -1,4 +1,4 @@
-// Baseado no exercício 3O, capítulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 3O, capÃ­tulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -8,7 +8,7 @@ int main(void)
 
     int inteiro, resultado;
 
-    std::cout << "Informe um número inteiro: "; std::cin >> inteiro;
+    std::cout << "Informe um nÃºmero inteiro: "; std::cin >> inteiro;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
