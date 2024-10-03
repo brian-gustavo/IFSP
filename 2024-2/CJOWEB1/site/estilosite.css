@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: white;
+}
+
+/* Para telas de celular */
+@media all and (max-width: 480px) {
+    
+}
+
+/* Para telas de tablet */
+@media all and (max-width: 770px) {
+    
+}
+
+/* Para telas de notebook */
+@media all and (max-width: 995px) {
+    
+}
