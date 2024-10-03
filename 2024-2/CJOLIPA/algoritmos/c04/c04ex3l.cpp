@@ -1,4 +1,4 @@
-// Baseado no exercício 3L, capítulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 3L, capÃ­tulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -13,7 +13,7 @@ int main(void)
     if (not(valor > 3))
         std::cout << valor << std::endl << std::endl;
 
-    std::cout << "Tecle <Enter> para encerrar...";
+    std::cout << "Tecle <Enter> para encerrar... ";
     std::cin.get();
     return 0;
 }
