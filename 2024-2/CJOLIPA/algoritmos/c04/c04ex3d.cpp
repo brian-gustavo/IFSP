@@ -29,18 +29,18 @@ int main(void)
     if (md1 >= 7)
         std::cout << "Aprovado com média " << md1 << std::endl << std::endl;
     else
-        {
-            std::cout << "Média abaixo de 7, informe a nota de exame: "; std::cin >> ne;
-            std::cin.ignore(80, '\n');
-            std::cout << std::endl;
+    {
+        std::cout << "Média abaixo de 7, informe a nota de exame: "; std::cin >> ne;
+        std::cin.ignore(80, '\n');
+        std::cout << std::endl;
 
-            md2 = (ne + md1) / 2;
+        md2 = (ne + md1) / 2;
 
-            if (md2 >= 5)
-                std::cout << "Aprovado em exame, com média " << md2 << std::endl << std::endl;
-            else
-                std::cout << "Reprovado com média " << md2 << std::endl << std::endl;
-        }
+        if (md2 >= 5)
+            std::cout << "Aprovado em exame, com média " << md2 << std::endl << std::endl;
+        else
+            std::cout << "Reprovado com média " << md2 << std::endl << std::endl;
+    }
 
     std::cout << "Tecle <Enter> para encerrar... ";
     std::cin.get();
