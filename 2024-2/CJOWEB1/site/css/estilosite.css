@@ -1,23 +1,44 @@
+/* Configurações globais */
 body {
     background-color: black;
     color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 header {
+    display: flex;
     background-color: white;
+    padding: 18px;
+    font-size: 18px;
+    justify-content: space-evenly;
+    border-radius: 64px;
 }
 
-/* Para telas de celular */
-@media all and (max-width: 480px) {
-    
+img {
+    margin: 0 auto;
+    display: block;
 }
 
-/* Para telas de tablet */
-@media all and (max-width: 770px) {
-    
-}
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
 
-/* Para telas de notebook */
-@media all and (max-width: 995px) {
-    
-}
+    .header {
+        padding: 16px;
+        font-size: 16px;
+    }
+    }
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    .header {
+        padding: 14px;
+        font-size: 14px;
+    }
+    }
