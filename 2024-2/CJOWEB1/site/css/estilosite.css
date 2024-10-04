@@ -19,6 +19,17 @@ img {
     display: block;
 }
 
+iframe {
+    margin: 0 auto;
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 /* Para telas menores que 768px */
 @media (max-width: 768px) {
     body {
