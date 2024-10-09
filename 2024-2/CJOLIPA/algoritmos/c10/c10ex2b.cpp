@@ -1,4 +1,4 @@
-// Baseado no exercício 2B, capítulo 10 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 2B, capÃ­tulo 10 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -9,7 +9,7 @@ void somatorio(int ultimo)
    for (int contador = 1; contador <= ultimo; contador++)
         soma = soma + contador;
 
-   std::cout << "Somatório = " << soma << std::endl;
+   std::cout << "SomatÃ³rio = " << soma << std::endl;
 }
 
 int main(void)
@@ -18,7 +18,7 @@ int main(void)
 
     int numero;
 
-    std::cout << "Insira o valor de encerramento do somatório: "; std::cin >> numero;
+    std::cout << "Insira o valor de encerramento do somatÃ³rio: "; std::cin >> numero;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
