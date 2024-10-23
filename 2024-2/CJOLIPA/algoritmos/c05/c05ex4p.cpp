@@ -1,4 +1,4 @@
-// Baseado no exercício 4P, capítulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 4P, capÃ­tulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -8,7 +8,6 @@ int main(void)
 
     int resto, contador = 0, soma = 0, numero = 50;
     float media;
-
 
     do
         {
@@ -24,8 +23,8 @@ int main(void)
 
     media = soma / contador;
 
-    std::cout << "Somatório dos valores = " << soma << std::endl;
-    std::cout << "Média dos valores = " << media << std::endl;
+    std::cout << "SomatÃ³rio dos valores = " << soma << std::endl;
+    std::cout << "MÃ©dia dos valores = " << media << std::endl;
 
     std::cout << std::endl;
     std::cout << "Tecle <Enter> para encerrar... ";
