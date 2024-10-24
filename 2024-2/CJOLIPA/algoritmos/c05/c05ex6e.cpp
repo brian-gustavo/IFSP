@@ -1,12 +1,12 @@
-// Baseado no exercício 6E, capítulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 6E, capÃ­tulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
 int main(void)
 {
-    int resto, numero;
+    int resto;
 
-    for (numero = 0; numero <= 20; ++numero)
+    for (int numero = 0; numero <= 20; ++numero)
     {
         resto = numero - 2 * (numero / 2);
         if (resto != 0)
