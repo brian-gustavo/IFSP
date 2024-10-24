@@ -10,15 +10,15 @@ int main(void)
     float media;
 
     do
+    {
+        resto = numero - 2 * (numero / 2);
+        if (resto == 0)
         {
-            resto = numero - 2 * (numero / 2);
-            if (resto == 0)
-            {
-                contador++;
-                soma += numero;
-            }
-            numero++;
+            contador++;
+            soma += numero;
         }
+        numero++;
+    }
     while (not(numero > 70));
 
     media = soma / contador;
