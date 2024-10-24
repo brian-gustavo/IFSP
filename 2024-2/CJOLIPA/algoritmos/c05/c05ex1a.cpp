@@ -8,11 +8,11 @@ int main(void)
     int quadrado, inteiro = 15;
 
     while (inteiro <= 200)
-        {
-            quadrado = pow(inteiro, 2);
-            std::cout << quadrado << std::endl << std::endl;
-            inteiro++;
-        }
+    {
+        quadrado = pow(inteiro, 2);
+        std::cout << quadrado << std::endl << std::endl;
+        inteiro++;
+    }
 
     std::cout << "Tecle <Enter> para encerrar... ";
     std::cin.get();
