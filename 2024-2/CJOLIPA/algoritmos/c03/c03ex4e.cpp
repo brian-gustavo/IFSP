@@ -1,10 +1,13 @@
 // Baseado no exercício 4E, capítulo 3 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
+#include <iomanip>
 
 int main(void)
 {
     setlocale(LC_ALL, ".1252");
+
+    std::cout << std::setprecision(2) << std::fixed << std::right;
 
     float valor, taxa, tempo, prestacao;
 
@@ -12,11 +15,11 @@ int main(void)
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
-    std::cout << "Informe a taxa de cobrança: "; std::cin >> taxa;
+    std::cout << "Informe a porcentagem da taxa de cobrança: "; std::cin >> taxa;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
-    std::cout << "Informe o tempo de atraso: "; std::cin >> tempo;
+    std::cout << "Informe o tempo de atraso, em dias: "; std::cin >> tempo;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
