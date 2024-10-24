@@ -1,4 +1,4 @@
-// Baseado no exercício 4M, capítulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 4M, capÃ­tulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -10,20 +10,20 @@ int main(void)
     int contador = 1;
 
     do
-        {
-            std::cout << "Insira um valor: "; std::cin >> valor;
-            std::cin.ignore(80, '\n');
-            std::cout << std::endl;
+    {
+        std::cout << "Insira um valor: "; std::cin >> valor;
+        std::cin.ignore(80, '\n');
+        std::cout << std::endl;
 
-            soma += valor;
-            contador++;
-        }
+        soma += valor;
+        contador++;
+    }
     while (not(contador > 10));
 
     media = soma / 10;
 
-    std::cout << "Somatório dos valores = " << soma << std::endl;
-    std::cout << "Média dos valores = " << media << std::endl;
+    std::cout << "SomatÃ³rio dos valores = " << soma << std::endl;
+    std::cout << "MÃ©dia dos valores = " << media << std::endl;
 
     std::cout << "Tecle <Enter> para encerrar... ";
     std::cin.get();
