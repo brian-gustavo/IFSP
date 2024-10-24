@@ -1,10 +1,13 @@
 // Baseado no exercício 4L, capítulo 3 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
+#include <iomanip>
 
 int main(void)
 {
     setlocale(LC_ALL, ".1252");
+
+    std::cout << std::setprecision(2) << std::fixed << std::right;
 
     float carteira, cotacao, conversao;
 
