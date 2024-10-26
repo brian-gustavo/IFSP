@@ -1,15 +1,18 @@
 /* Configurações globais */
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
+
 body {
     background-color: black;
     color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Germania One", system-ui;
+    font-size: large;
 }
 
 header {
     display: flex;
     background-color: white;
     padding: 18px;
-    font-size: 18px;
+    font-size: large;
     justify-content: space-evenly;
     border-radius: 64px;
 }
@@ -36,7 +39,6 @@ ul {
     padding: 0px 75px 0px 75px;
 }
 
-
 .container1 {
     display: flex;
     flex: 1;
@@ -58,24 +60,18 @@ ul {
 
 /* Para telas menores que 768px */
 @media (max-width: 768px) {
+    .header {
+        font-size: larger;
+    }
+    }
+
+/* Para telas menores que 425px */
+@media (max-width: 425px) {
     body {
-        font-size: 14px;
+        font-size: xx-large;
     }
 
     .header {
-        padding: 16px;
-        font-size: 16px;
-    }
-    }
-
-/* Para telas menores que 480px */
-@media (max-width: 480px) {
-    body {
-        font-size: 12px;
-    }
-
-    .header {
-        padding: 14px;
-        font-size: 14px;
+        font-size: xx-large;
     }
     }
