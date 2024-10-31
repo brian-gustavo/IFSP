@@ -59,8 +59,18 @@ ul {
     flex-direction: column;
 }
 
+.noticia {
+    display: flex;
+    padding: 10px;
+    border: 1px solid white;
+}
+
 /* Para telas menores que 768px */
 @media (max-width: 768px) {
+    img {
+        padding: 18px;
+    }
+
     .header {
         font-size: larger;
     }
