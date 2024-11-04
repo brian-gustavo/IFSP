@@ -4,22 +4,81 @@
     <meta charset="UTF-8"/>
     <title>Página inicial</title>
     <link rel="stylesheet" href="css/estilosite.css">
+    <style>
+        .containerIndex {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        
+        .containerIntroducao {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        
+        .containerNoticias {
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2c2c2c;
+            border-radius: 8px;
+        }
+
+        .containerNoticias a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+        
+        .containerNoticias a:hover {
+            text-decoration: underline;
+        }
+        
+        .noticia {
+            display: flex;
+            padding: 15px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background-color: #3a3a3a;
+            transition: transform 0.3s;
+        }
+        
+        .noticia:hover {
+            transform: scale(1.02);
+        }
+        
+        .noticiaImagem img {
+            border-radius: 5px;
+        }
+        
+        .noticia p {
+            margin-left: 15px;
+            flex: 1;
+        }
+        
+        p:last-child {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <a href="historia.html">História</a>  <a href="subgeneros.html">Subgêneros</a> <a href="recomendacoes.html">Recomendações</a> <a href="sobre.html">Sobre</a>
     </header>
-    <div class="container1">
-        <div class="container2">
+    <div class="containerIndex">
+        <div class="containerIntroducao">
             <h1>Boas vindas ao site do metal!</h1>
                 <p>Neste site, você irá aprender sobre a história do metal, alguns de seus principais subgêneros e recomendações de bandas.</p>
-            <br>
             <h3>Mas afinal de contas, o que é metal?</h3>
                 <p>Metal é um gênero musical que surgiu a partir do rock, sendo uma versão mais "pesada" deste; daí o termo em inglês <i>heavy metal</i>, pelo qual o gênero também é chamado. Não se sabe exatamente o porquê do nome ou quem foi seu criador, mas a principal especulação é de que o público dizia que o som das primeiras bandas do estilo era "igual o som de metal pesado sendo esmagado".</p>
                 <p>Surgiu no começo dos anos 70, e possui uma legião de fãs dedicados até hoje, apesar de sua popularidade atual estar distante do auge que teve durante os anos 80, 90 e 2000.</p>
-                <br>
                 <img src="img/metaleiros.png" alt="metaleiros" width=480px height=320px>
-                <br>
                 <p>Existem diversas variações do estilo (os chamados subgêneros), mas em geral, as suas principais características são:</p>
                 <ul>
                     <li>Bandas geralmente compostas por um vocalista, 1-2 guitarristas, um baterista e um baixista;</li>
@@ -30,8 +89,8 @@
                     <li>Letras sombrias e frequentemente controversas, tratando dos mais diversos tópicos.</li>
             </ul>
         </div>
-        <div class="container1">
-            <div class="container3">
+        <div class="containerIndex">
+            <div class="containerNoticias">
                 <h3>Notícias</h3>
                 <div class="noticia">
                     <div class="noticiaImagem">
