@@ -113,12 +113,8 @@ ul {
         font-size: 16px;
         text-align: center;
     }
-
-    .imagemSobre img {
-        width: 100%;
-        height: auto;
     }
-    }
+    
 /* Para telas menores que 425px */
 @media (max-width: 425px) {
     body {
