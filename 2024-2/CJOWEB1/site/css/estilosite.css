@@ -45,10 +45,157 @@ ul {
 
 /* Para telas menores que 768px */
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
     
+    header {
+        padding: 10px;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
     }
 
+    .containerIndex {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .containerIntroducao {
+        padding: 10px;
+    }
+
+    .containerNoticias {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .noticia {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .noticiaImagem img {
+        width: 100%;
+        height: auto;
+    }
+
+    .containerVideos {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .containerVideos iframe {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .textoSubgeneros {
+        padding: 0px 30px;
+    }
+
+    .containerSpotify iframe {
+        width: 40%;
+    }
+
+    .containerSobre {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textoSobre {
+        flex: 1;
+        max-width: 90%;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .imagemSobre img {
+        width: 100%;
+        height: auto;
+    }
+    }
 /* Para telas menores que 425px */
 @media (max-width: 425px) {
+    body {
+        font-size: 12px;
+    }
+    
+    header {
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    header a {
+        margin: 5px 0;
+        font-size: 14px;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .containerIntroducao {
+        padding: 8px;
+    }
+
+    .containerIntroducao h1 {
+        font-size: 1.4em;
+    }
+
+    .containerIntroducao p {
+        font-size: 0.9em;
+    }
+
+    .containerNoticias {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .noticia {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .noticia p {
+        font-size: 0.9em;
+    }
+
+    .noticiaImagem img {
+        width: 100%;
+        height: auto;
+    }
+
+    .containerVideos {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .containerVideos iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .textoSubgeneros {
+        padding: 0px 15px;
+        font-size: 14px;
+    }
+
+    .containerSpotify iframe {
+        width: 100%;
+    }
+
+    .textoSobre {
+        font-size: 14px;
+        padding: 10px;
+    }
     }
