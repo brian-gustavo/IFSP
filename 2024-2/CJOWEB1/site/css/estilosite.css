@@ -16,6 +16,12 @@ header {
     border-radius: 64px;
 }
 
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    color: gray;
+}
+
 img {
     margin: 0 auto;
     display: block;
@@ -114,7 +120,7 @@ ul {
         text-align: center;
     }
     }
-    
+
 /* Para telas menores que 425px */
 @media (max-width: 425px) {
     body {
