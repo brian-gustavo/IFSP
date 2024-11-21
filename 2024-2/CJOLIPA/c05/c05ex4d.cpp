@@ -1,4 +1,4 @@
-// Baseado no exercício 4D, capítulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 4D, capÃ­tulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -17,7 +17,7 @@ int main(void)
     }
     while (not(contador > 500));
 
-    std::cout << "Somatório dos valores pares entre 1 e 500 = " << soma;
+    std::cout << "SomatÃ³rio dos valores pares entre 1 e 500 = " << soma;
     std::cout << std::endl;
 
     std::cout << std::endl;
