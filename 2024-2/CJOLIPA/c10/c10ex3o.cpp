@@ -1,4 +1,4 @@
-// Baseado no exercício 3O, capítulo 10 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 3O, capÃ­tulo 10 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
