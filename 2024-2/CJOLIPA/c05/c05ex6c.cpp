@@ -1,4 +1,4 @@
-// Baseado no exercício 6C, capítulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 6C, capÃ­tulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -11,7 +11,7 @@ int main(void)
     for (int contador = 1; contador <= 100; ++contador)
         soma += contador;
 
-    std::cout << "Somatório dos 100 primeiros números naturais = " << soma;
+    std::cout << "SomatÃ³rio dos 100 primeiros nÃºmeros naturais = " << soma;
     std::cout << std::endl;
 
     std::cout << std::endl;
