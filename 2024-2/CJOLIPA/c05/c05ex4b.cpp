@@ -1,4 +1,4 @@
-// Baseado no exercício 4B, capítulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 4B, capÃ­tulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -8,7 +8,7 @@ int main(void)
 
     int numero, resultado, contador = 1;
 
-    std::cout << "Insira o número do qual se deseja obter a tabuada: "; std::cin >> numero;
+    std::cout << "Insira o nÃºmero do qual se deseja obter a tabuada: "; std::cin >> numero;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
