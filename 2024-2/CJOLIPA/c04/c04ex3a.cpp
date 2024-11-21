@@ -1,4 +1,4 @@
-// Baseado no exercício 3A, capítulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 3A, capÃ­tulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -21,7 +21,7 @@ int main(void)
     else
         resultado = b - a;
 
-    std::cout << "Diferença do maior pro menor valor = " << resultado << std::endl;
+    std::cout << "DiferenÃ§a do maior pro menor valor = " << resultado << std::endl;
 
     std::cout << std::endl;
     std::cout << "Tecle <Enter> para encerrar... ";
