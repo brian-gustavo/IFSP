@@ -1,4 +1,4 @@
-// Baseado no exercício 3F, capítulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 3F, capÃ­tulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
