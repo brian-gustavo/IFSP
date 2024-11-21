@@ -1,4 +1,4 @@
-// Baseado no exercício 3C, capítulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 3C, capÃ­tulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -31,7 +31,7 @@ int main(void)
     else
         std::cout << "Reprovado." << std::endl << std::endl;
 
-    std::cout << "Média = " << md << std::endl << std::endl;
+    std::cout << "MÃ©dia = " << md << std::endl << std::endl;
 
     std::cout << "Tecle <Enter> para encerrar... ";
     std::cin.get();
