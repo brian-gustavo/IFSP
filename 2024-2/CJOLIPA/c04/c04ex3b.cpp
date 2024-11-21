@@ -1,4 +1,4 @@
-// Baseado no exercício 3B, capítulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 3B, capÃ­tulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -15,7 +15,7 @@ int main(void)
     if (n < 0)
         n = n * (-1);
 
-    std::cout << "Valor fornecido, em módulo = " << n << std::endl;
+    std::cout << "Valor fornecido, em mÃ³dulo = " << n << std::endl;
 
     std::cout << std::endl;
     std::cout << "Tecle <Enter> para encerrar... ";
