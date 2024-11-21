@@ -1,4 +1,4 @@
-// Baseado no exercício extra fornecido em vídeo sobre o capítulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio extra fornecido em vÃ­deo sobre o capÃ­tulo 5 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -10,7 +10,7 @@ int main(void)
 
     do
     {
-        std::cout << "Insira um valor qualquer até que a condição seja cumprida: "; std::cin >> numero;
+        std::cout << "Insira um valor qualquer atÃ© que a condiÃ§Ã£o seja cumprida: "; std::cin >> numero;
         std::cin.ignore(80, '\n');
         std::cout << std::endl;
 
@@ -19,7 +19,7 @@ int main(void)
     }
     while (numero < 0 or resto2 == 0 or resto3 != 0);
 
-    std::cout << "Condição cumprida, o valor foi " << numero << std::endl << std::endl;
+    std::cout << "CondiÃ§Ã£o cumprida, o valor foi " << numero << std::endl << std::endl;
 
     std::cout << "Tecle <Enter> para encerrar... ";
     std::cin.get();
