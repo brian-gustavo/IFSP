@@ -1,4 +1,4 @@
-// Baseado no exercício 3J, capítulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 3J, capÃ­tulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -17,7 +17,7 @@ int main(void)
     if (resto == 0)
         std::cout << "Par." << std::endl;
     else
-        std::cout << "Ímpar." << std::endl;
+        std::cout << "Ãmpar." << std::endl;
 
     std::cout << std::endl;
     std::cout << "Tecle <Enter> para encerrar... ";
