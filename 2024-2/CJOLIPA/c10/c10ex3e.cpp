@@ -1,4 +1,4 @@
-// Baseado no exercício 3E, capítulo 10 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 3E, capÃ­tulo 10 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 #include <string>
@@ -10,9 +10,9 @@ void paridade(int valor, std::string &resultado)
    resto = valor - 2 * (valor / 2);
 
    if (resto == 0)
-    resultado = "O número inserido é par.";
+    resultado = "O nÃºmero inserido Ã© par.";
    else
-    resultado = "O número inserido é ímpar.";
+    resultado = "O nÃºmero inserido Ã© Ã­mpar.";
 }
 
 int main(void)
