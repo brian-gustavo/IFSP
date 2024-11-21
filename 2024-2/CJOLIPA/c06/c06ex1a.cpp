@@ -1,4 +1,4 @@
-// Baseado no exercício 1A, capítulo 6 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 1A, capÃ­tulo 6 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 #include <string>
