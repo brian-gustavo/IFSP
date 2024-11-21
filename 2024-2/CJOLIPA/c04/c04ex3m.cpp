@@ -1,6 +1,6 @@
 /*
-    Baseado no exercÌcio 3M, capÌtulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
-    Optei por n„o usar o comando "toupper" neste exercÌcio por necessitar de laÁo, que È de um capÌtulo posterior.
+    Baseado no exerc√≠cio 3M, cap√≠tulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+    Optei por n√£o usar o comando "toupper" neste exerc√≠cio por necessitar de la√ßo, que √© de um cap√≠tulo posterior.
 */
 
 #include <iostream>
@@ -15,7 +15,7 @@ int main(void)
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
-    std::cout << "Insira seu sexo (M ou F, atentando ao uso de letra mai˙scula): "; std::cin >> sexo;
+    std::cout << "Insira seu sexo (M ou F, atentando ao uso de letra mai√∫scula): "; std::cin >> sexo;
     std::cin.ignore(80, '\n');
     std::cout << std::endl;
 
@@ -27,7 +27,7 @@ int main(void)
             std::cout << "Ilma Sra. " << nome << std::endl << std::endl;
     }
     else
-        std::cout << "Sexo informado inv·lido." << std::endl << std::endl;
+        std::cout << "Sexo informado inv√°lido." << std::endl << std::endl;
 
     std::cout << "Tecle <Enter> para encerrar... ";
     std::cin.get();
