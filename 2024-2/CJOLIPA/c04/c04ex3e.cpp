@@ -1,4 +1,4 @@
-// Baseado no exercício 3E, capítulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 3E, capÃ­tulo 4 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 #include <cmath>
@@ -25,15 +25,15 @@ int main(void)
     {
         delta = pow(b, 2) - (4 * a * c);
         if (delta < 0)
-            std::cout << "Não há solução real." << std::endl << std::endl;
+            std::cout << "NÃ£o hÃ¡ soluÃ§Ã£o real." << std::endl << std::endl;
         else
         {
             solucao1 = (-b + sqrt(delta)) / (2 * a);
             solucao2 = (-b - sqrt(delta)) / (2 * a);
             if (delta == 0)
-                std::cout << "Solução = " << solucao1 << std::endl << std::endl;
+                std::cout << "SoluÃ§Ã£o = " << solucao1 << std::endl << std::endl;
             else
-                std::cout << "Soluções = " << solucao1 << " e " << solucao2 << std::endl << std::endl;
+                std::cout << "SoluÃ§Ãµes = " << solucao1 << " e " << solucao2 << std::endl << std::endl;
         }
     }
 
