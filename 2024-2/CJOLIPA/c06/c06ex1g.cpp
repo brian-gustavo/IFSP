@@ -1,4 +1,4 @@
-// Baseado no exercício 1G, capítulo 6 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 1G, capÃ­tulo 6 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 #include <string>
@@ -11,16 +11,14 @@ int main(void)
     for (contador = 0; contador <= 19; ++contador)
     {
         std::cout << "Informe o " << contador + 1 << "o. nome da matriz 1: ";
-        std::cin >> a[contador];
-        std::cin.ignore(80, '\n');
+        getline(std::cin, a[contador]);
     }
     std::cout << std::endl;
 
     for (contador = 0; contador <= 29; ++contador)
     {
         std::cout << "Informe o " << contador + 1 << "o. nome da matriz 2: ";
-        std::cin >> b[contador];
-        std::cin.ignore(80, '\n');
+        getline(std::cin, b[contador]);
     }
     std::cout << std::endl;
 
