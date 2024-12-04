@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 2.2.a</title>
+    </head>
+    <body>
+        <script>
+            function escopo() {
+               var x = 10;
+            }
+
+            escopo();
+            console.log(x); // O programa exibirá um erro, já que a variável x é de escopo local da função.
+        </script>
+    </body>
+</html>
