@@ -9,9 +9,9 @@ void paridade(int valor)
    resto = valor - 2 * (valor / 2);
 
    if (resto == 0)
-    std::cout << valor << " é par." << std::endl;
+      std::cout << valor << " é par." << std::endl;
    else
-    std::cout << valor << " é ímpar." << std::endl;
+      std::cout << valor << " é ímpar." << std::endl;
 }
 
 int main(void)
