@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 2.1.b</title>
+    </head>
+    <body>
+        <script>
+            function mediaArray(array) {
+                const soma = array.reduce((acumulador, numero) => acumulador + numero, 0);
+
+                return soma / array.length;
+            }
+
+            const numeros = [5, 10, 15, 20, 25];
+            const resultado = mediaArray(numeros);
+            console.log(resultado);
+        </script>
+    </body>
+</html>
