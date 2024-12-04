@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 3.2.a</title>
+    </head>
+    <body>
+        <script>
+            function filtradorPalavras(array) {
+               return array.filter(palavra => palavra.length > 5);
+            }
+
+            const palavras = ["batata", "piolho", "cruz", "mosca", "paralelepípedo", "céu"];
+            const palavrasFiltradas = filtradorPalavras(palavras);
+            console.log(palavrasFiltradas);
+        </script>
+    </body>
+</html>
