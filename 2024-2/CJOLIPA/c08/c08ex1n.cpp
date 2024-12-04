@@ -1,4 +1,4 @@
-// Baseado no exercício 1N, capítulo 8 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 1N, capÃ­tulo 8 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
