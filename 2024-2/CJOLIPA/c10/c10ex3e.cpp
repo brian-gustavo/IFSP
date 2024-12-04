@@ -10,9 +10,9 @@ void paridade(int valor, std::string &resultado)
    resto = valor - 2 * (valor / 2);
 
    if (resto == 0)
-    resultado = "O número inserido é par.";
+      resultado = "O número inserido é par.";
    else
-    resultado = "O número inserido é ímpar.";
+      resultado = "O número inserido é ímpar.";
 }
 
 int main(void)
