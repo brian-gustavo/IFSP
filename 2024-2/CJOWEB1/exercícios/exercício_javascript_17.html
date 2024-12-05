@@ -11,9 +11,9 @@
                return array.filter(palavra => palavra.length > 5);
             }
 
-            const palavras = ["batata", "piolho", "cruz", "mosca", "paralelepípedo", "céu"];
-            const palavrasFiltradas = filtradorPalavras(palavras);
-            console.log(palavrasFiltradas);
+            var palavras = prompt("Insira as palavras a serem filtradas, separadas por vírgula:");
+            var matrizPalavras = palavras.split(',').map(palavra => palavra.trim());
+            console.log(filtradorPalavras(matrizPalavras));
         </script>
     </body>
 </html>
