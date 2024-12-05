@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 5.10</title>
+    </head>
+    <body>
+        <select id="corFundo" onchange="mudarCorFundo()">
+            <option value="white">Branco</option>
+            <option value="lightblue">Azul claro</option>
+            <option value="lightgreen">Verde claro</option>
+            <option value="lightpink">Rosa claro</option>
+        </select>
+
+        <script>
+            function mudarCorFundo() {
+                var novaCor = document.getElementById("corFundo").value;
+
+                document.body.style.backgroundColor = novaCor;
+            }
+        </script>
+    </body>
+</html>
