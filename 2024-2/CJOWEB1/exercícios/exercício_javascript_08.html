@@ -10,15 +10,16 @@
             function somatorio(parametro) {
                 var soma = 0;
 
-                for (var i = 0; i <= parametro; i++) {
-                    soma += i;
+                for (var i = 0; i < parametro.length; i++) {
+                    soma += parametro[i];
                 }
 
                 return soma;
             }
 
-            var resultado = somatorio(5);
-            console.log(resultado);
+            var numeros = prompt("Digite números separados por vírgulas:");
+            var array = numeros.split(',').map(num => parseFloat(num));
+            console.log(somatorio(array));
         </script>
     </body>
 </html>
