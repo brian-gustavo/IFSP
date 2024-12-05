@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 5.8</title>
+    </head>
+    <body>
+        <button id="botaoContador" onclick="contarCliques()">Clique aqui</button>
+        <p id="contador">Cliques:</p>
+
+        <script>
+            var cliques = 0;
+            
+            function contarCliques() {
+                cliques++;
+                document.getElementById("contador").innerText = "Cliques: " + cliques;
+            }
+        </script>
+    </body>
+</html>
