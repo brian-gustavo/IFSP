@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 5.2</title>
+    </head>
+    <body>
+        <p id="paragrafo" class="inicial">Parágrafo com estilo inicial</p>
+        <button id="toggleClasse" onclick="toggleClasse()">Toggle classe</button>
+
+        <script>
+            function toggleClasse() {
+                const pParagrafo = document.getElementById("paragrafo");
+                pParagrafo.classList.toggle("destaque");
+            }
+        </script>
+    </body>
+</html>
