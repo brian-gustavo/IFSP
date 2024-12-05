@@ -7,29 +7,20 @@
     </head>
     <body>
         <script>
-            function faixaEtaria(idade) {
-                if (idade <= 12) {
+            function faixaEtaria(anos) {
+                if (anos <= 12) {
                     return "Criança.";
-                } else if (idade <= 18) {
+                } else if (anos <= 18) {
                     return "Adolescente.";
-                } else if (idade <= 60) {
+                } else if (anos <= 60) {
                     return "Adulto.";
                 } else {
                     return "Idoso.";
                 }
             }
-
-            var resultado = faixaEtaria(5);
-            console.log(resultado);
-
-            var resultado = faixaEtaria(15);
-            console.log(resultado);
-
-            var resultado = faixaEtaria(35);
-            console.log(resultado);
-
-            var resultado = faixaEtaria(75);
-            console.log(resultado);
+            
+            var idade = parseFloat(prompt("Insira a idade da pessoa: "));
+            console.log(faixaEtaria(idade));
         </script>
     </body>
 </html>
