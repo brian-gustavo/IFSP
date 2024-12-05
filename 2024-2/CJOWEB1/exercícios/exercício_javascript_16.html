@@ -11,9 +11,9 @@
                return array.map(num => num * num);
             }
 
-            const numeros = [1, 2, 3, 4, 5];
-            const numerosMap = quadrados(numeros);
-            console.log(numerosMap);
+            var numeros = prompt("Digite números separados por vírgulas:");
+            var numerosMap = numeros.split(',').map(num => parseFloat(num));
+            console.log(quadrados(numerosMap));
         </script>
     </body>
 </html>
