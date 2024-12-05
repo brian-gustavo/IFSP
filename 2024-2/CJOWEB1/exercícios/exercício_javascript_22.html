@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 4.2.a</title>
+    </head>
+    <body>
+        <script>
+            function verificaEmail(email) {
+                var arroba = email.includes('@');
+                var final = email.includes(".com", email.length - 4)
+
+                if (arroba == true && final == true) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            console.log(verificaEmail("exemplo123@gmail.com"));
+            console.log(verificaEmail("exemplo123gmail.org"));
+        </script>
+    </body>
+</html>
