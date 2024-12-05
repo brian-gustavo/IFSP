@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 5.1</title>
+    </head>
+    <body>
+        <div id="mensagem">Mensagem inicial</div>
+        <button id="mudarTexto" onclick="mudarTexto()">Mudar texto</button>
+
+        <script>
+            function mudarTexto() {
+                const divMensagem = document.getElementById("mensagem");
+                divMensagem.textContent = "Texto atualizado!";
+            }
+        </script>
+    </body>
+</html>
