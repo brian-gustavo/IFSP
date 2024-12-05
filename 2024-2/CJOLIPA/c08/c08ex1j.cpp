@@ -1,4 +1,4 @@
-// Baseado no exercício 1J, capítulo 8 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
+// Baseado no exercÃ­cio 1J, capÃ­tulo 8 do livro "Algoritmos", escrito pelo prof. Augusto Manzano.
 
 #include <iostream>
 
@@ -30,9 +30,9 @@ int main(void)
     }
     std::cout << std::endl;
 
-    for (contador1 = 0; contador1 <= 4; ++contador1)
+    for (contador1 = 0; contador1 <= 5; ++contador1)
     {
-        for (contador2 = 0; contador2 <= 5; ++contador2)
+        for (contador2 = 0; contador2 <= 4; ++contador2)
         {
             std::cout << "Valor da coluna " << contador2 + 1 << ", linha " << contador1 + 1 << " da matriz original = " << a[contador1][contador2];
             std::cout << std::endl;
@@ -40,9 +40,9 @@ int main(void)
     }
     std::cout << std::endl;
 
-    for (contador1 = 0; contador1 <= 4; ++contador1)
+    for (contador1 = 0; contador1 <= 5; ++contador1)
     {
-        for (contador2 = 0; contador2 <= 5; ++contador2)
+        for (contador2 = 0; contador2 <= 4; ++contador2)
         {
             std::cout << "Valor da coluna " << contador2 + 1 << ", linha " << contador1 + 1 << " da nova matriz = " << b[contador1][contador2];
             std::cout << std::endl;
