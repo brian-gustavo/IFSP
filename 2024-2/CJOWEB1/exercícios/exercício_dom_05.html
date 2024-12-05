@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 5.5</title>
+    </head>
+    <body>
+        <ul id="listaDeTarefas">
+            <li>Tarefa 1</li>
+            <li>Tarefa 2</li>
+        </ul>
+        <button id="adicionarTarefa" onclick="adicionarTarefa()">Adicionar tarefa</button>
+
+        <script>
+            function adicionarTarefa() {
+                const lista = document.createElement("li");
+                const node = document.createTextNode("Nova tarefa");
+                lista.appendChild(node);
+
+                const tarefas = document.getElementById("listaDeTarefas");
+                tarefas.appendChild(lista);
+            }
+        </script>
+    </body>
+</html>
