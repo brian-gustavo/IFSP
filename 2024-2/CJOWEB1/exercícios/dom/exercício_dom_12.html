@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 5.12</title>
+    </head>
+    <body>
+        <p id="horarioAtual">Horário:</p>
+        <button id="atualizarHorario" onclick="atualizarHorario()">Atualizar horário</button>
+
+        <script>
+            function atualizarHorario() {
+                var agora = new Date();
+                var horas = agora.getHours();
+                var minutos = agora.getMinutes();
+
+                horas = horas < 10 ? "0" + horas : horas;
+                minutos = minutos < 10 ? "0" + minutos : minutos;
+
+                document.getElementById("horarioAtual").innerText = "Horário: " + horas + ":" + minutos;
+            }
+        </script>
+    </body>
+</html>
