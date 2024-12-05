@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 5.7</title>
+    </head>
+    <body>
+        <input type="number" id="num1" placeholder="Número 1">
+        <input type="number" id="num2" placeholder="Número 2">
+        <button id="calcular" onclick="calcular()">Somar</button>
+        <p id="resultado">Resultado:</p>
+
+        <script>
+            function calcular() {
+                var n1 = parseFloat(document.getElementById("num1").value);
+                var n2 = parseFloat(document.getElementById("num2").value);
+
+                var soma = n1 + n2;
+
+                document.getElementById("resultado").innerText = "Resultado: " + soma;
+            }
+        </script>
+    </body>
+</html>
