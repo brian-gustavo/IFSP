@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Exercício 4.2.b</title>
+    </head>
+    <body>
+        <script>
+            function apenasIniciais(nome) {
+                const partes = nome.split(' ');
+                const iniciais = partes.map(palavra => palavra.charAt(0).toUpperCase()).join('');
+                return iniciais;
+            }
+
+            console.log(apenasIniciais("Brian Gustavo de Oliveira Brandão"));
+        </script>
+    </body>
+</html>
