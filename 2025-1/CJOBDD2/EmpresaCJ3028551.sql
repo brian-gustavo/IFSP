@@ -88,3 +88,55 @@ SELECT * FROM FUNCIONARIOS
 WHERE Salario < 3000
 ORDER BY Nome, Salario DESC;
 GO
+
+-- Criação de uma tabela para testes
+CREATE TABLE TESTE (
+	ID INT,
+	Nome CHAR(10)
+);
+GO
+
+-- Comando específico do SQL Server para exibir a estrutura da tabela
+EXEC sp_columns TESTE;
+GO
+
+-- Renomeando informações do sistema para o usuário
+SELECT TABLE_CATALOG AS 'Banco de Dados',
+	   TABLE_NAME AS 'Tabela',
+	   ORDINAL_POSITION AS 'Posição',
+	   COLUMN_NAME AS 'Coluna',
+	   DATA_TYPE AS 'Tipo de Dados',
+	   COLLATION_NAME AS 'Idioma da Coluna',
+	   IS_NULLABLE AS 'Aceita Nulo'
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'TESTE';
+GO
+
+-- Altera informações da tabela
+ALTER TABLE TESTE
+	ALTER COLUMN Nome CHAR(50);
+GO
+
+ALTER TABLE TESTE
+	ADD Sexo CHAR(1);
+GO
+
+ALTER TABLE TESTE
+	ADD DataNascimento CHAR(10);
+GO
+
+ALTER TABLE TESTE
+	DROP COLUMN DataNascimento; -- Remove uma coluna
+GO
+
+ALTER TABLE TESTE
+	ALTER COLUMN ID INT NOT NULL;
+GO
+
+ALTER TABLE TESTE
+	ADD CONSTRAINT pk_id PRIMARY KEY (ID); -- Adiciona uma restrição
+GO
+
+-- Comando específico do SQL Server para exibir as restrições
+EXEC sp_helpconstraint TESTE;
+GO
