@@ -140,3 +140,7 @@ GO
 -- Comando específico do SQL Server para exibir as restrições
 EXEC sp_helpconstraint TESTE;
 GO
+
+-- Exclui uma tabela
+DROP TABLE TESTE;
+GO
