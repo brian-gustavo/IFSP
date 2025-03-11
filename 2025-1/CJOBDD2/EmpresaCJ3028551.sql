@@ -144,3 +144,98 @@ GO
 -- Exclui uma tabela
 DROP TABLE TESTE;
 GO
+
+-- Aplicando os conceitos anteriores em tabelas "reais"
+CREATE TABLE CLIENTES (
+	ID INT PRIMARY KEY,
+	Nome VARCHAR(50) NOT NULL,
+	Sexo CHAR(1) NULL,
+	Idade INT CHECK (Idade > 18) NOT NULL,
+	CPF CHAR(11) UNIQUE NOT NULL,
+	Email VARCHAR(200) DEFAULT 'meu@email.com' NOT NULL
+);
+GO
+
+CREATE TABLE #TabelaA (
+	ID INT NOT NULL,
+	Nome VARCHAR(25) NOT NULL,
+	Sexo CHAR(1) NULL,
+	PRIMARY KEY (ID)
+);
+GO
+
+INSERT INTO #TabelaA VALUES
+	(1, 'Marcelo Augusto', 'M'),
+	(2, 'Paula Maurícia', 'F');
+GO
+
+SELECT * FROM #TabelaA
+GO
+
+CREATE TABLE #TabelaB (
+	ID INT NOT NULL,
+	Nome VARCHAR(25) NOT NULL,
+	Sexo CHAR(1) NULL,
+	PRIMARY KEY (ID)
+);
+GO
+
+INSERT INTO #TabelaB VALUES
+	(1, 'Marcelo Augusto', 'M'),
+	(2, 'Maria Cristina', 'F');
+GO
+
+SELECT * FROM #TabelaB
+GO
+
+INSERT INTO #TabelaA
+	SELECT ID,
+		   Nome,
+		   Sexo 
+	FROM FUNCIONARIOS
+	WHERE ID > 2;
+GO
+
+SELECT CONSTRAINT_CATALOG AS 'Banco de Dados',
+	   TABLE_NAME AS 'Tabela',
+	   CONSTRAINT_TYPE AS 'Tipo de Restrição',
+	   CONSTRAINT_NAME AS 'Nome da Restrição'
+FROM tempdb.INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+WHERE TABLE_NAME LIKE '#TabelaA';
+GO
+
+-- Criando uma cópia de uma determinada tabela
+SELECT *
+	INTO FuncionariosCOPIA
+FROM FUNCIONARIOS;
+GO
+
+SELECT * FROM FuncionariosCOPIA;
+GO
+
+SELECT TABLE_CATALOG AS 'Banco de Dados',
+	   TABLE_NAME AS 'Tabela',
+	   ORDINAL_POSITION AS 'Posição',
+	   COLUMN_NAME AS 'Coluna',
+	   DATA_TYPE AS 'Tipo de Dados',
+	   COLLATION_NAME AS 'Idioma da Coluna',
+	   IS_NULLABLE AS 'Aceita Nulo'
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'FuncionariosCOPIA';
+GO
+
+SELECT CONSTRAINT_CATALOG AS 'Banco de Dados',
+	   TABLE_NAME AS 'Tabela',
+	   CONSTRAINT_TYPE AS 'Tipo de Restrição',
+	   CONSTRAINT_NAME AS 'Nome da Restrição'
+FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+WHERE TABLE_NAME IN ('Funcionarios', 'FuncionariosCOPIA');
+GO
+
+ALTER TABLE FuncionariosCOPIA
+	ADD CONSTRAINT pk_id PRIMARY KEY (ID);
+GO
+
+-- Comando específico do SQL Server para exibir ajuda sobre algo
+EXEC sp_help 'CLIENTES';
+GO
