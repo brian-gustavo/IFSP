@@ -1,3 +1,5 @@
+-- Este arquivo é um teste para o SQL Server, contendo vários comandos básicos e exemplos de como utilizá-los.
+
 -- Cria o banco de dados
 CREATE DATABASE EmpresaCJ3028551;
 GO
