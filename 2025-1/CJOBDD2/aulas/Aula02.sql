@@ -62,3 +62,7 @@ GO
 
 SELECT * FROM FuncionariosCOPIA;
 GO
+
+DELETE FROM FuncionariosCOPIA
+WHERE Salario < 1500;
+GO
