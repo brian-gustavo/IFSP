@@ -60,9 +60,15 @@ GO
 SELECT * FROM FUNCIONARIOS;
 GO
 
+DELETE FROM FuncionariosCOPIA
+WHERE Salario < 1500;
+GO
+
 SELECT * FROM FuncionariosCOPIA;
 GO
 
-DELETE FROM FuncionariosCOPIA
-WHERE Salario < 1500;
+TRUNCATE TABLE FuncionariosCOPIA;
+GO
+
+SELECT * FROM FuncionariosCOPIA;
 GO
