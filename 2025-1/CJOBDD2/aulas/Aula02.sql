@@ -60,6 +60,7 @@ GO
 SELECT * FROM FUNCIONARIOS;
 GO
 
+-- Deleta informações específicas de uma tabela
 DELETE FROM FuncionariosCOPIA
 WHERE Salario < 1500;
 GO
@@ -67,7 +68,18 @@ GO
 SELECT * FROM FuncionariosCOPIA;
 GO
 
+-- Deleta todas as informações de uma tabela
 TRUNCATE TABLE FuncionariosCOPIA;
+GO
+
+SELECT * FROM FuncionariosCOPIA;
+GO
+
+-- Remove uma tabela do banco de dados
+DROP TABLE FuncionariosCOPIA;
+GO
+
+SELECT * FROM FuncionariosCOPIA;
 GO
 
 SELECT * FROM FuncionariosCOPIA;
