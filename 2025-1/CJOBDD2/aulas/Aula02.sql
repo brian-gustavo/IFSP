@@ -82,5 +82,15 @@ GO
 SELECT * FROM FuncionariosCOPIA;
 GO
 
-SELECT * FROM FuncionariosCOPIA;
+-- Usando operadores lógicos
+SELECT * FROM FUNCIONARIOS
+WHERE Sexo <> 'M';
+GO
+
+SELECT * FROM FUNCIONARIOS
+WHERE Sexo != 'M';
+GO
+
+SELECT * FROM FUNCIONARIOS
+WHERE NOT Sexo = 'M';
 GO
