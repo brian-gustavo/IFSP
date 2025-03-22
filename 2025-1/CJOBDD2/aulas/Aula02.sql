@@ -82,7 +82,7 @@ GO
 SELECT * FROM FuncionariosCOPIA;
 GO
 
--- Usando operadores lógicos
+-- Usando operadores lógicos e operadores de comparação
 SELECT * FROM FUNCIONARIOS
 WHERE Sexo <> 'M';
 GO
