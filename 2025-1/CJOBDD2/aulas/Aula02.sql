@@ -121,3 +121,34 @@ GO
 SELECT * FROM FUNCIONARIOS
 WHERE Nome LIKE 'M%';
 GO
+
+-- Cria uma "view", para exibir informações sem permitir o acesso à tabela
+CREATE VIEW MaioresSalarios AS
+	SELECT ID AS 'Código do Funcionário',
+	       Nome,
+		   Sexo,
+		   Salario AS 'Salário'
+	FROM FUNCIONARIOS;
+GO
+
+-- Utilizando a "view"
+SELECT * FROM MaioresSalarios;
+GO
+
+SELECT [Codigo do Funcionário],
+	   Nome,
+	   Salário
+FROM MaioresSalarios;
+GO
+
+EXEC sp_helptext MaioresSalarios;
+GO
+
+SELECT TABLE_NAME AS 'Nome da View',
+	   VIEW_DEFINITION AS 'Código SQL'
+FROM INFORMATION_SCHEMA.VIEWS;
+GO
+
+-- Deletando a "view"
+DROP VIEW MaioresSalarios;
+GO
