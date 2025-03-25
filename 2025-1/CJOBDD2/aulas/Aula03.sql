@@ -17,3 +17,19 @@ WITH (
 	FIELDTERMINATOR = ','
 );
 GO
+
+SELECT * FROM DEPENDENTES;
+GO
+
+-- Junção de tabelas através do comando "join"
+SELECT *
+FROM FUNCIONARIOS CROSS JOIN
+DEPENDENTES;
+GO
+
+SELECT F.ID AS 'Código do Funcionário',
+	   F.Nome AS 'Nome do Funcionário',
+	   D.Nome AS 'Nome do Dependente',
+	   D.DataNascimento AS 'Data de Nascimento'
+FROM FUNCIONARIOS F CROSS JOIN DEPENDENTES D;
+GO
