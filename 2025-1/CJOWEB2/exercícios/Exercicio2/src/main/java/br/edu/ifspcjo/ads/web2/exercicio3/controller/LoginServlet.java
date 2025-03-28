@@ -9,7 +9,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/login")
 public class LoginServlet extends HttpServlet
 {
     private static final String EMAIL_VALIDO = "usuario@exemplo.com";
