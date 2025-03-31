@@ -54,3 +54,42 @@ FROM FUNCIONARIOS F INNER JOIN DEPENDENTES D
 WHERE YEAR(D.DataNascimento) >= 2000
 ORDER BY F.Name, D.Name;
 GO
+
+INSERT INTO FUNCIONARIOS VALUES
+	(11, 'Ana Cláudia', 'F', '12/09/2011', 4000.00, '3663-5050'),
+	(12, 'André Lima', 'M', '05/11/2009', 2050.00, '3664-8989'),
+	(13, 'Marcos Souza', 'M', '02/10/2009', 3800.00, NULL),
+	(14, 'Mariana Gomes', 'F', '10/11/2010', 1750.50, NULL),
+	(15, 'Cínthia Faria', 'F', '10/07/2016', 1750.50, '3662-1212');
+GO
+
+SELECT F.ID AS 'ID',
+	   F.Nome AS 'Funcionário',
+	   F.Admissao AS 'Admissão',
+	   F.Salario AS 'Salário',
+	   D.Nome AS 'Dependente',
+	   D.DataNascimento AS 'Data de Nascimento'
+FROM FUNCIONARIOS F LEFT OUTER JOIN DEPENDENTES D
+	ON F.ID = D.ID;
+GO
+
+SELECT F.ID AS 'ID',
+	   F.Nome AS 'Funcionário',
+	   F.Admissao AS 'Admissão',
+	   F.Salario AS 'Salário',
+	   D.Nome AS 'Dependente',
+	   D.DataNascimento AS 'Data de Nascimento'
+FROM FUNCIONARIOS F LEFT OUTER JOIN DEPENDENTES D
+	ON F.ID = D.ID
+WHERE D.Nome IS NULL;
+GO
+
+SELECT F.ID AS 'ID',
+	   F.Nome AS 'Funcionário',
+	   F.Admissao AS 'Admissão',
+	   F.Salario AS 'Salário',
+	   D.Nome AS 'Dependente',
+	   D.DataNascimento AS 'Data de Nascimento'
+FROM FUNCIONARIOS F RIGHT OUTER JOIN DEPENDENTES D
+	ON F.ID = D.ID;
+GO
