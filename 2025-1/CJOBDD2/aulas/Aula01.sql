@@ -1,4 +1,4 @@
--- Este arquivo é um teste para o SQL Server, contendo vários comandos básicos e exemplos de como utilizá-los.
+-- Este arquivo e os seguintes são testes para o SQL Server, contendo vários comandos básicos e exemplos de como utilizá-los.
 
 -- Cria o banco de dados
 CREATE DATABASE EmpresaCJ3028551;
@@ -55,9 +55,9 @@ GO
 
 -- Diferentes exemplos de selecionamento de informações da tabela a serem exibidas
 SELECT ID AS 'Código do Funcionário',
-	Nome,
-	Sexo,
-	Salario AS 'Salário'
+       Nome,
+       Sexo,
+       Salario AS 'Salário'
 FROM FUNCIONARIOS;
 GO
 
@@ -69,7 +69,7 @@ FROM FUNCIONARIOS;
 GO
 
 SELECT TOP 3
-	ID, Nome
+       ID, Nome
 FROM FUNCIONARIOS;
 GO
 
@@ -104,12 +104,12 @@ GO
 
 -- Renomeando informações do sistema para o usuário
 SELECT TABLE_CATALOG AS 'Banco de Dados',
-	   TABLE_NAME AS 'Tabela',
-	   ORDINAL_POSITION AS 'Posição',
-	   COLUMN_NAME AS 'Coluna',
-	   DATA_TYPE AS 'Tipo de Dados',
-	   COLLATION_NAME AS 'Idioma da Coluna',
-	   IS_NULLABLE AS 'Aceita Nulo'
+       TABLE_NAME AS 'Tabela',
+       ORDINAL_POSITION AS 'Posição',
+       COLUMN_NAME AS 'Coluna',
+       DATA_TYPE AS 'Tipo de Dados',
+       COLLATION_NAME AS 'Idioma da Coluna',
+       IS_NULLABLE AS 'Aceita Nulo'
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'TESTE';
 GO
@@ -192,23 +192,23 @@ GO
 
 INSERT INTO #TabelaA
 	SELECT ID,
-		   Nome,
-		   Sexo 
+	       Nome,
+	       Sexo 
 	FROM FUNCIONARIOS
 	WHERE ID > 2;
 GO
 
 SELECT CONSTRAINT_CATALOG AS 'Banco de Dados',
-	   TABLE_NAME AS 'Tabela',
-	   CONSTRAINT_TYPE AS 'Tipo de Restrição',
-	   CONSTRAINT_NAME AS 'Nome da Restrição'
+       TABLE_NAME AS 'Tabela',
+       CONSTRAINT_TYPE AS 'Tipo de Restrição',
+       CONSTRAINT_NAME AS 'Nome da Restrição'
 FROM tempdb.INFORMATION_SCHEMA.TABLE_CONSTRAINTS
 WHERE TABLE_NAME LIKE '#TabelaA';
 GO
 
 -- Criando uma cópia de uma determinada tabela
 SELECT *
-	INTO FuncionariosCOPIA
+       INTO FuncionariosCOPIA
 FROM FUNCIONARIOS;
 GO
 
@@ -216,20 +216,20 @@ SELECT * FROM FuncionariosCOPIA;
 GO
 
 SELECT TABLE_CATALOG AS 'Banco de Dados',
-	   TABLE_NAME AS 'Tabela',
-	   ORDINAL_POSITION AS 'Posição',
-	   COLUMN_NAME AS 'Coluna',
-	   DATA_TYPE AS 'Tipo de Dados',
-	   COLLATION_NAME AS 'Idioma da Coluna',
-	   IS_NULLABLE AS 'Aceita Nulo'
+       TABLE_NAME AS 'Tabela',
+       ORDINAL_POSITION AS 'Posição',
+       COLUMN_NAME AS 'Coluna',
+       DATA_TYPE AS 'Tipo de Dados',
+       COLLATION_NAME AS 'Idioma da Coluna',
+       IS_NULLABLE AS 'Aceita Nulo'
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'FuncionariosCOPIA';
 GO
 
 SELECT CONSTRAINT_CATALOG AS 'Banco de Dados',
-	   TABLE_NAME AS 'Tabela',
-	   CONSTRAINT_TYPE AS 'Tipo de Restrição',
-	   CONSTRAINT_NAME AS 'Nome da Restrição'
+       TABLE_NAME AS 'Tabela',
+       CONSTRAINT_TYPE AS 'Tipo de Restrição',
+       CONSTRAINT_NAME AS 'Nome da Restrição'
 FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
 WHERE TABLE_NAME IN ('Funcionarios', 'FuncionariosCOPIA');
 GO
