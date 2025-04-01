@@ -28,29 +28,29 @@ DEPENDENTES;
 GO
 
 SELECT F.ID AS 'Código do Funcionário',
-	   F.Nome AS 'Nome do Funcionário',
-	   D.Nome AS 'Nome do Dependente',
-	   D.DataNascimento AS 'Data de Nascimento'
+       F.Nome AS 'Nome do Funcionário',
+       D.Nome AS 'Nome do Dependente',
+       D.DataNascimento AS 'Data de Nascimento'
 FROM FUNCIONARIOS F CROSS JOIN DEPENDENTES D;
 GO
 
 SELECT F.ID AS 'Código do Funcionário',
-	   F.Nome AS 'Nome do Funcionário',
-	   F.Salario AS 'Salário',
-	   D.Nome AS 'Nome do Dependente',
-	   D.ID AS 'Código do Responsável'
+       F.Nome AS 'Nome do Funcionário',
+       F.Salario AS 'Salário',
+       D.Nome AS 'Nome do Dependente',
+       D.ID AS 'Código do Responsável'
 FROM FUNCIONARIOS F JOIN DEPENDENTES D;
-	ON F.ID = D.ID;
+       ON F.ID = D.ID;
 GO
 
 SELECT F.ID AS 'Código do Funcionário',
-	   F.Nome AS 'Nome do Funcionário',
-	   F.Salario AS 'Salário',
-	   D.Nome AS 'Nome do Dependente',
-	   D.DataNascimento AS 'Data de Nascimento',
-	   D.ID AS 'Código do Responsável'
+       F.Nome AS 'Nome do Funcionário',
+       F.Salario AS 'Salário',
+       D.Nome AS 'Nome do Dependente',
+       D.DataNascimento AS 'Data de Nascimento',
+       D.ID AS 'Código do Responsável'
 FROM FUNCIONARIOS F INNER JOIN DEPENDENTES D
-	ON F.ID = D.ID
+       ON F.ID = D.ID
 WHERE YEAR(D.DataNascimento) >= 2000
 ORDER BY F.Name, D.Name;
 GO
@@ -64,32 +64,59 @@ INSERT INTO FUNCIONARIOS VALUES
 GO
 
 SELECT F.ID AS 'ID',
-	   F.Nome AS 'Funcionário',
-	   F.Admissao AS 'Admissão',
-	   F.Salario AS 'Salário',
-	   D.Nome AS 'Dependente',
-	   D.DataNascimento AS 'Data de Nascimento'
+       F.Nome AS 'Funcionário',
+       F.Admissao AS 'Admissão',
+       F.Salario AS 'Salário',
+       D.Nome AS 'Dependente',
+       D.DataNascimento AS 'Data de Nascimento'
 FROM FUNCIONARIOS F LEFT OUTER JOIN DEPENDENTES D
-	ON F.ID = D.ID;
+       ON F.ID = D.ID;
 GO
 
 SELECT F.ID AS 'ID',
-	   F.Nome AS 'Funcionário',
-	   F.Admissao AS 'Admissão',
-	   F.Salario AS 'Salário',
-	   D.Nome AS 'Dependente',
-	   D.DataNascimento AS 'Data de Nascimento'
+       F.Nome AS 'Funcionário',
+       F.Admissao AS 'Admissão',
+       F.Salario AS 'Salário',
+       D.Nome AS 'Dependente',
+       D.DataNascimento AS 'Data de Nascimento'
 FROM FUNCIONARIOS F LEFT OUTER JOIN DEPENDENTES D
-	ON F.ID = D.ID
+       ON F.ID = D.ID
 WHERE D.Nome IS NULL;
 GO
 
 SELECT F.ID AS 'ID',
-	   F.Nome AS 'Funcionário',
-	   F.Admissao AS 'Admissão',
-	   F.Salario AS 'Salário',
-	   D.Nome AS 'Dependente',
-	   D.DataNascimento AS 'Data de Nascimento'
+       F.Nome AS 'Funcionário',
+       F.Admissao AS 'Admissão',
+       F.Salario AS 'Salário',
+       D.Nome AS 'Dependente',
+       D.DataNascimento AS 'Data de Nascimento'
 FROM FUNCIONARIOS F RIGHT OUTER JOIN DEPENDENTES D
-	ON F.ID = D.ID;
+       ON F.ID = D.ID;
+GO
+
+SELECT F.ID AS 'ID',
+       F.Nome AS 'Funcionário',
+       F.Admissao AS 'Admissão',
+       F.Salario AS 'Salário',
+       D.Nome AS 'Dependente',
+       D.DataNascimento AS 'Data de Nascimento'
+FROM FUNCIONARIOS F FULL OUTER JOIN DEPENDENTES D
+       ON F.ID = D.ID;
+GO
+
+-- Usando o comando "count" para exibir apenas informações específicas
+SELECT F.ID AS 'ID',
+       F.Nome AS 'Funcionário',
+       COUNT(F.ID) AS 'Total de Dependentes'
+FROM FUNCIONARIOS F INNER JOIN DEPENDENTES D
+       ON F.ID = D.ID
+GROUP BY F.ID, F.Nome;
+GO
+
+SELECT F.ID AS 'ID',
+       F.Nome AS 'Funcionário',
+       COUNT(D.ID) AS 'Total de Dependentes'
+FROM FUNCIONARIOS F FULL OUTER JOIN DEPENDENTES D
+       ON F.ID = D.ID
+GROUP BY F.ID, F.Nome;
 GO
