@@ -1,13 +1,13 @@
 -- Este arquivo e os seguintes são testes para o SQL Server, contendo vários comandos básicos e exemplos de como utilizá-los.
 
--- Cria o banco de dados
+-- Cria o banco de dados e utiliza-o
 CREATE DATABASE EmpresaCJ3028551;
 GO
 
 USE EmpresaCJ3028551;
 GO
 
--- Cria a tabela
+-- Cria uma tabela dentro do banco de dados
 CREATE TABLE FUNCIONARIOS (
 	ID INT PRIMARY KEY,
 	Nome VARCHAR(25) NOT NULL,
@@ -61,10 +61,10 @@ SELECT ID AS 'Código do Funcionário',
 FROM FUNCIONARIOS;
 GO
 
-SELECT * FROM FUNCIONARIOS;
+SELECT * FROM FUNCIONARIOS; -- O asterisco representa todos os campos
 GO
 
-SELECT TOP 3 *
+SELECT TOP 3 * -- "top" exibe apenas os primeiros registros da tabela; neste caso, três
 FROM FUNCIONARIOS;
 GO
 
@@ -79,7 +79,7 @@ GO
 
 -- Ordenando os resultados
 SELECT * FROM FUNCIONARIOS
-ORDER BY Nome;
+ORDER BY Nome; -- A ordem padrão é ASC; ou seja, ascendente
 GO
 
 SELECT * FROM FUNCIONARIOS
@@ -136,6 +136,10 @@ ALTER TABLE TESTE
 GO
 
 ALTER TABLE TESTE
+	ADD UNIQUE (Sexo); -- "unique" é uma restrição não nomeada, do tipo única
+GO
+
+ALTER TABLE TESTE
 	ADD CONSTRAINT pk_id PRIMARY KEY (ID); -- Adiciona uma restrição
 GO
 
@@ -143,6 +147,11 @@ GO
 EXEC sp_helpconstraint TESTE;
 GO
 
+-- Exclui uma restrição
+ALTER TABLE TESTE
+	DROP CONSTRAINT pk_id;
+GO
+	
 -- Exclui uma tabela
 DROP TABLE TESTE;
 GO
