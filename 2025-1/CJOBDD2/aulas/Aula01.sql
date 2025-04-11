@@ -241,3 +241,7 @@ GO
 -- Comando específico do SQL Server para exibir ajuda sobre algo
 EXEC sp_help 'CLIENTES';
 GO
+
+-- Exemplo de execução de operações matemáticas
+SELECT 5+7.5, 5-7.5, 5*7.5;
+GO
