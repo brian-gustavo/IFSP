@@ -28,7 +28,7 @@ GO
 
 -- Atualiza informações da tabela
 UPDATE FUNCIONARIOS
-	SET Telefone = '3668-0810';
+	SET Telefone = '3668-0810'; -- Atualização geral
 GO
 
 SELECT * FROM FUNCIONARIOS;
@@ -43,7 +43,7 @@ GO
 
 UPDATE FUNCIONARIOS
 	SET Telefone = '3668-0810'
-	WHERE ID = 1;
+	WHERE ID = 1; -- Atualização específica
 GO
 
 SELECT * FROM FUNCIONARIOS;
@@ -55,6 +55,14 @@ UPDATE FUNCIONARIOS SET Telefone = '8765-4321' WHERE ID = 5;
 UPDATE FUNCIONARIOS SET Telefone = '5678-1234' WHERE ID = 7;
 UPDATE FUNCIONARIOS SET Telefone = '4321-8765' WHERE ID = 9;
 UPDATE FUNCIONARIOS SET Telefone = '1122-8899' WHERE ID = 10;
+GO
+
+SELECT * FROM FUNCIONARIOS;
+GO
+
+UPDATE FUNCIONARIOS
+	SET Salario = Salario * 1.10
+	WHERE YEAR(Admissao) < 2016;
 GO
 
 SELECT * FROM FUNCIONARIOS;
@@ -84,11 +92,7 @@ GO
 
 -- Exemplos de uso de operadores lógicos e operadores de comparação
 SELECT * FROM FUNCIONARIOS
-WHERE Sexo <> 'M';
-GO
-
-SELECT * FROM FUNCIONARIOS
-WHERE Sexo != 'M';
+WHERE Sexo <> 'M'; -- Ao invés de "<>", pode-se utilizar "!="
 GO
 
 SELECT * FROM FUNCIONARIOS
@@ -105,13 +109,14 @@ WHERE Salario BETWEEN 1000 AND 1800
 GO
 
 SELECT * FROM FUNCIONARIOS
-WHERE Telefone IS NULL;
+WHERE Telefone IS NULL; -- Atenção: "= NULL" não funciona
 GO
 
 SELECT * FROM FUNCIONARIOS
 WHERE Telefone IS NOT NULL;
 GO
 
+-- Verifica se existe algo em específico, e executa alguma ação a partir do resultado
 IF EXISTS (
 	SELECT * FROM FUNCIONARIOS
 	WHERE Salario > 2000
@@ -139,17 +144,18 @@ WHERE Salario IN (
 );
 GO
 
+-- Utilização do comando "LIKE" para comparar sequências de caracteres; existem outros usos do comando além dos mostrados aqui
 SELECT * FROM FUNCIONARIOS
-WHERE Nome LIKE 'M%';
+WHERE Nome LIKE 'M%'; -- Valores que começam com a letra M
 GO
 
 SELECT * FROM FUNCIONARIOS
-WHERE UPPER(Nome) LIKE '%SILVA%'
+WHERE UPPER(Nome) LIKE '%SILVA%' -- Valores que tenham a palavra "Silva" em qualquer posição; "UPPER" converte os dados para maiúsculos, assim garantindo que eles sejam retornados adequadamente
 ORDER BY Nome;
 GO
 
 SELECT * FROM FUNCIONARIOS
-WHERE Nome LIKE '[^M]%';
+WHERE Nome LIKE '[^M]%'; -- Valores que comecem com qualquer letra exceto M
 ORDER BY Nome;
 GO
 
