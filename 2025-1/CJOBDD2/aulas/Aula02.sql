@@ -112,6 +112,15 @@ SELECT * FROM FUNCIONARIOS
 WHERE Telefone IS NOT NULL;
 GO
 
+IF EXISTS (
+	SELECT * FROM FUNCIONARIOS
+	WHERE Salario > 2000
+)
+	PRINT 'Alguém recebe acima de R$2000,00!';
+ELSE
+	PRINT 'Ninguém recebe acima de R$2000,00...';
+GO
+
 SELECT * FROM FUNCIONARIOS
 WHERE ID = 1 OR
       ID = 2 OR
@@ -119,7 +128,29 @@ WHERE ID = 1 OR
 GO
 
 SELECT * FROM FUNCIONARIOS
+WHERE ID IN (1, 2, 5);
+GO
+
+SELECT * FROM FUNCIONARIOS
+WHERE Salario IN (
+	SELECT Salario
+	FROM FUNCIONARIOS
+	WHERE Salario > 2000.00
+);
+GO
+
+SELECT * FROM FUNCIONARIOS
 WHERE Nome LIKE 'M%';
+GO
+
+SELECT * FROM FUNCIONARIOS
+WHERE UPPER(Nome) LIKE '%SILVA%'
+ORDER BY Nome;
+GO
+
+SELECT * FROM FUNCIONARIOS
+WHERE Nome LIKE '[^M]%';
+ORDER BY Nome;
 GO
 
 -- Cria uma "view", para exibir informações sem permitir o acesso à tabela
@@ -141,6 +172,18 @@ SELECT [Codigo do Funcionário],
 FROM MaioresSalarios;
 GO
 
+-- Alterando a "view"
+ALTER VIEW MaioresSalarios AS
+	SELECT ID AS 'Código do Funcionário',
+	       Nome,
+	       Sexo AS 'Sexo do Funcionário',
+	       Salario AS 'Salário'
+	FROM FUNCIONARIOS
+	ORDER BY Salario DESC
+	OFFSET 0 ROWS;
+GO
+
+-- Exibindo informações sobre a "view"
 EXEC sp_helptext MaioresSalarios;
 GO
 
