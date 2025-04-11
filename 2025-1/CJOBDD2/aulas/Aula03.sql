@@ -18,6 +18,7 @@ WITH (
 	FIRSTROW = 2,
 	DATAFILETYPE = 'widechar',
 	FIELDTERMINATOR = ','
+	CODEPAGE = '65001'
 );
 GO
 
@@ -26,7 +27,7 @@ GO
 
 -- Junção de tabelas através do comando "join"
 SELECT *
-FROM FUNCIONARIOS CROSS JOIN
+FROM FUNCIONARIOS CROSS JOIN -- Retorna o produto cartesiano de duas tabelas
 DEPENDENTES;
 GO
 
@@ -52,7 +53,7 @@ SELECT F.ID AS 'Código do Funcionário',
        D.Nome AS 'Nome do Dependente',
        D.DataNascimento AS 'Data de Nascimento',
        D.ID AS 'Código do Responsável'
-FROM FUNCIONARIOS F INNER JOIN DEPENDENTES D
+FROM FUNCIONARIOS F INNER JOIN DEPENDENTES D -- Retorna apenas registros com correspondências em ambas as tabelas
        ON F.ID = D.ID
 WHERE YEAR(D.DataNascimento) >= 2000
 ORDER BY F.Name, D.Name;
@@ -72,7 +73,7 @@ SELECT F.ID AS 'ID',
        F.Salario AS 'Salário',
        D.Nome AS 'Dependente',
        D.DataNascimento AS 'Data de Nascimento'
-FROM FUNCIONARIOS F LEFT OUTER JOIN DEPENDENTES D
+FROM FUNCIONARIOS F LEFT OUTER JOIN DEPENDENTES D -- Retorna todos os registros da tabela esquerda, e seus correspondentes na direita se houverem
        ON F.ID = D.ID;
 GO
 
@@ -93,7 +94,7 @@ SELECT F.ID AS 'ID',
        F.Salario AS 'Salário',
        D.Nome AS 'Dependente',
        D.DataNascimento AS 'Data de Nascimento'
-FROM FUNCIONARIOS F RIGHT OUTER JOIN DEPENDENTES D
+FROM FUNCIONARIOS F RIGHT OUTER JOIN DEPENDENTES D -- Retorna todos os registros da tabela direita, e seus correspondentes na esquerda se houverem
        ON F.ID = D.ID;
 GO
 
@@ -103,7 +104,7 @@ SELECT F.ID AS 'ID',
        F.Salario AS 'Salário',
        D.Nome AS 'Dependente',
        D.DataNascimento AS 'Data de Nascimento'
-FROM FUNCIONARIOS F FULL OUTER JOIN DEPENDENTES D
+FROM FUNCIONARIOS F FULL OUTER JOIN DEPENDENTES D -- Retorna todos os registros correspondentes nas duas tabelas, preenchendo o resto com valores nulos
        ON F.ID = D.ID;
 GO
 
