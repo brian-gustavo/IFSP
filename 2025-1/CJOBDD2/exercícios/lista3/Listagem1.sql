@@ -20,9 +20,9 @@ SELECT TABLE_CATALOG AS 'Banco de Dados',
        COLLATION_NAME AS 'Idioma da Coluna',
        IS_NULLABLE AS 'Aceita Nulo?'
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME = 'FUNCIONARIOS';
+WHERE TABLE_NAME = 'CLIENTES';
 GO
 
--- Exibe todos os registros da tabela
+-- Exibe todos os registros de uma tabela
 SELECT * FROM CLIENTES;
 GO
