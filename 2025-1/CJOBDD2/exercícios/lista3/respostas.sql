@@ -1,7 +1,7 @@
 -- Questão 1
 ALTER TABLE CLIENTES
 	ADD DDD CHAR(2),
-		  Telefone CHAR(10);
+	    Telefone CHAR(10);
 GO
 
 -- Questão 2
@@ -85,10 +85,10 @@ GO
 -- Questão 9
 SELECT ID,
        Nome,
-	     Sexo,
-	     Idade,
-	     DDD,
-	     Telefone
+       Sexo,
+       Idade,
+       DDD,
+       Telefone
 FROM CLIENTES
 WHERE Idade > 40
 ORDER BY Idade DESC;
@@ -97,9 +97,9 @@ GO
 -- Questão 10
 SELECT ID,
        Nome,
-	     Email AS 'E-mail',
-	     DDD AS 'Código de Área',
-	     Telefone
+       Email AS 'E-mail',
+       DDD AS 'Código de Área',
+       Telefone
 FROM CLIENTES
 WHERE Telefone IS NULL OR Email = 'meu@email.com'
 ORDER BY Nome;
@@ -108,9 +108,9 @@ GO
 -- Questão 11
 SELECT ID,
        Nome,
-	     Sexo,
-	     Idade,
-	     Email AS 'E-mail'
+       Sexo,
+       Idade,
+       Email AS 'E-mail'
 FROM CLIENTES
 WHERE Sexo = 'M' AND Idade BETWEEN 20 AND 50
 ORDER BY Idade, Nome;
@@ -119,10 +119,10 @@ GO
 -- Questão 12
 SELECT ID,
        Nome,
-	     CPF,
-	     Email AS 'E-mail',
-	     DDD AS 'Código de Área',
-	     Telefone
+       CPF,
+       Email AS 'E-mail',
+       DDD AS 'Código de Área',
+       Telefone
 FROM CLIENTES
 WHERE Telefone IS NOT NULL
 ORDER BY Nome;
@@ -141,9 +141,9 @@ GO
 -- Questão 14
 SELECT ID,
        Nome,
-	     Idade,
-	     DDD AS 'Código de Área',
-	     Telefone
+       Idade,
+       DDD AS 'Código de Área',
+       Telefone
 FROM CLIENTES
 WHERE DDD = 11 OR DDD = 15 OR Idade = 19 OR Idade = 20 OR Idade = 22 OR Idade = 32 OR Idade = 70
 ORDER BY Idade, DDD;
@@ -151,11 +151,11 @@ GO
 
 -- Questão 15
 SELECT ID,
-	     Nome,
-	     Sexo,
-	     Email AS 'E-mail',
-	     DDD AS 'Código de Área',
-	     Telefone
+       Nome,
+       Sexo,
+       Email AS 'E-mail',
+       DDD AS 'Código de Área',
+       Telefone
 FROM CLIENTES
 WHERE Nome LIKE 'A%'
 ORDER BY Nome;
@@ -163,11 +163,11 @@ GO
 
 -- Questão 16
 SELECT ID,
-	     Nome,
-	     Sexo,
-	     Email AS 'E-mail',
-	     DDD AS 'Código de Área',
-	     Telefone
+       Nome,
+       Sexo,
+       Email AS 'E-mail',
+       DDD AS 'Código de Área',
+       Telefone
 FROM CLIENTES
 WHERE Nome LIKE 'A%' OR Nome LIKE 'D%' OR Nome LIKE 'S%'
 ORDER BY Nome;
@@ -175,11 +175,11 @@ GO
 
 -- Questão 17
 SELECT ID,
-	     Nome,
-	     Sexo,
-	     Email AS 'E-mail',
-	     DDD AS 'Código de Área',
-	     Telefone
+       Nome,
+       Sexo,
+       Email AS 'E-mail',
+       DDD AS 'Código de Área',
+       Telefone
 FROM CLIENTES
 WHERE UPPER(Nome) LIKE '%LIMA%'
 ORDER BY Nome;
@@ -187,11 +187,11 @@ GO
 
 -- Questão 18
 SELECT ID,
-	     Nome,
-	     Sexo,
-	     Email AS 'E-mail',
-	     DDD AS 'Código de Área',
-	     Telefone
+       Nome,
+       Sexo,
+       Email AS 'E-mail',
+       DDD AS 'Código de Área',
+       Telefone
 FROM CLIENTES
 WHERE UPPER(Nome) LIKE '%LIMA%' OR UPPER(Nome) LIKE '%PEREIRA%'
 ORDER BY Nome;
@@ -199,11 +199,11 @@ GO
 
 -- Questão 19
 SELECT ID,
-	     Nome,
-	     Sexo,
-	     Email AS 'E-mail',
-	     DDD AS 'Código de Área',
-	     Telefone
+       Nome,
+       Sexo,
+       Email AS 'E-mail',
+       DDD AS 'Código de Área',
+       Telefone
 FROM CLIENTES
 WHERE Telefone LIKE '9%'
 ORDER BY Sexo, Nome;
@@ -211,12 +211,12 @@ GO
 
 -- Questão 20
 SELECT ID,
-	     Nome,
-	     Sexo,
-	     Idade,
-	     Email AS 'E-mail',
-	     DDD AS 'Código de Área',
-	     Telefone
+       Nome,
+       Sexo,
+       Idade,
+       Email AS 'E-mail',
+       DDD AS 'Código de Área',
+       Telefone
 FROM CLIENTES
 WHERE UPPER(Email) LIKE '%GMAIL%' AND DDD IS NOT NULL AND Idade > 20
 ORDER BY Email, Nome;
@@ -224,11 +224,11 @@ GO
 
 -- Questão 21
 SELECT ID,
-	     Nome,
-	     Sexo,
-	     Email AS 'E-mail',
-	     DDD AS 'Código de Área',
-	     Telefone
+       Nome,
+       Sexo,
+       Email AS 'E-mail',
+       DDD AS 'Código de Área',
+       Telefone
 FROM CLIENTES
 WHERE Nome LIKE '[^M]%' AND Nome LIKE '%O' AND Telefone LIKE '%7' AND Sexo IS NOT NULL
 ORDER BY Nome;
@@ -250,8 +250,8 @@ CREATE VIEW ClientesMASCULINO AS
 	       Sexo,
 	       Idade,
 	       Email AS 'E-mail',
-		     DDD AS 'Código de Área',
-		     Telefone
+	       DDD AS 'Código de Área',
+	       Telefone
 	FROM CLIENTES
 	WHERE Sexo = 'M';
 GO
@@ -262,16 +262,16 @@ ALTER VIEW ClientesMASCULINO AS
 	       Sexo,
 	       Idade,
 	       Email AS 'E-mail',
-		     DDD AS 'Código de Área',
-		     Telefone
+	       DDD AS 'Código de Área',
+	       Telefone
 	FROM CLIENTES
 	WHERE Sexo = 'M' AND Telefone IS NOT NULL;
 GO
 
 SELECT Nome,
-	     [E-mail],
-	     [Código de Área],
-	     Telefone
+       [E-mail],
+       [Código de Área],
+       Telefone
 FROM ClientesMASCULINO
 ORDER BY [Código de Área];
 GO
