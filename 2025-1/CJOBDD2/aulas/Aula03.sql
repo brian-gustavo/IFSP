@@ -43,7 +43,7 @@ SELECT F.ID AS 'Código do Funcionário',
        F.Salario AS 'Salário',
        D.Nome AS 'Nome do Dependente',
        D.ID AS 'Código do Responsável'
-FROM FUNCIONARIOS F JOIN DEPENDENTES D;
+FROM FUNCIONARIOS F JOIN DEPENDENTES D
        ON F.ID = D.ID;
 GO
 
