@@ -18,7 +18,6 @@ WITH (
 	FIRSTROW = 2,
 	DATAFILETYPE = 'widechar',
 	FIELDTERMINATOR = ','
-	CODEPAGE = '65001'
 );
 GO
 
