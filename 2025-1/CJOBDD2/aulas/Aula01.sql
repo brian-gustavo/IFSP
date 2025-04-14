@@ -167,7 +167,7 @@ CREATE TABLE CLIENTES (
 );
 GO
 
-CREATE TABLE #TabelaA (
+CREATE TABLE #TabelaA ( -- # denota uma tabela temporária
 	ID INT NOT NULL,
 	Nome VARCHAR(25) NOT NULL,
 	Sexo CHAR(1) NULL,
