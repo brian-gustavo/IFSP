@@ -56,7 +56,7 @@ SELECT F.ID AS 'Código do Funcionário',
 FROM FUNCIONARIOS F INNER JOIN DEPENDENTES D -- Retorna apenas registros com correspondências em ambas as tabelas
        ON F.ID = D.ID
 WHERE YEAR(D.DataNascimento) >= 2000
-ORDER BY F.Name, D.Name;
+ORDER BY F.Nome, D.Nome;
 GO
 
 INSERT INTO FUNCIONARIOS VALUES
