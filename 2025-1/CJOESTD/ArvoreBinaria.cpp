@@ -1,7 +1,8 @@
+// Arquivo temporário pra fins de consulta. Guarde em seu próprio repositório ou em outro local se precisar.
+
 #include <iostream>
 using namespace std;
 
-// Estrutura de um nó da árvore binária
 struct No
 {
     int valor;
@@ -11,25 +12,25 @@ struct No
 
 No* inicializar()
 {
-    return nullptr; // Inicializa o nó da árvore binária como nulo
+    return nullptr;
 }
 
 void adicionar(No*& raiz, int valor)
 {
-    if (raiz == nullptr) // Se a árvore estiver vazia
+    if (raiz == nullptr)
     {
-        raiz = new No; // Cria um novo nó
-        raiz->valor = valor; // Atribui o valor ao nó
-        raiz->esq = nullptr; // Inicializa o filho esquerdo como nulo
-        raiz->dir = nullptr; // Inicializa o filho direito como nulo
+        raiz = new No;
+        raiz->valor = valor;
+        raiz->esq = nullptr;
+        raiz->dir = nullptr;
     }
-    else if (valor < raiz->valor) // Se o valor for menor que o valor do nó atual
+    else if (valor < raiz->valor)
     {
-        adicionar(raiz->esq, valor); // Adiciona à subárvore esquerda
+        adicionar(raiz->esq, valor);
     }
-    else if (valor > raiz->valor) // Se o valor for maior que o valor do nó atual
+    else if (valor > raiz->valor)
     {
-        adicionar(raiz->dir, valor); // Adiciona à subárvore direita
+        adicionar(raiz->dir, valor);
     }
 }
 
@@ -74,9 +75,9 @@ void emOrdem(No* raiz)
 
 int main() 
 {
-    No* raiz = inicializar(); // Inicializa o nó da árvore binária
+    No* raiz = inicializar();
 
-    adicionar(raiz, 5); // Adiciona o valor 5 à árvore
+    adicionar(raiz, 5);
     adicionar(raiz, 25);
     adicionar(raiz, 35);
     adicionar(raiz, 15);
