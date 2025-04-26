@@ -1,4 +1,7 @@
--- Este arquivo e os seguintes são testes para o SQL Server, contendo vários comandos básicos e exemplos de como utilizá-los.
+/* 
+	Este arquivo e os seguintes são testes para o SQL Server, contendo vários comandos básicos e exemplos de como utilizá-los. 
+	Estão armazenados temporariamente para consulta, guarde-os no seu próprio repositório ou outro local se precisar no futuro.
+*/
 
 -- Cria o banco de dados e utiliza-o
 CREATE DATABASE EmpresaCJ3028551;
