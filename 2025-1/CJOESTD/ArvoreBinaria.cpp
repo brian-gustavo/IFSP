@@ -1,4 +1,4 @@
-// Arquivo temporário pra fins de consulta. Guarde em seu próprio repositório ou em outro local se precisar.
+// Arquivo temporário pra fins de consulta. Guarde em seu próprio repositório ou em outro local se precisar no futuro.
 
 #include <iostream>
 using namespace std;
