@@ -9,8 +9,8 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 
 @WebServlet("/register")
-public class UserRegisterServlet extends HttpServlet {
-
+public class UserRegisterServlet extends HttpServlet 
+{
     private final UserDao userDao = new UserDao();
 
     @Override
