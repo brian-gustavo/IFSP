@@ -12,8 +12,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @WebServlet("/add-task")
-public class TaskRegisterServlet extends HttpServlet {
-
+public class TaskRegisterServlet extends HttpServlet 
+{
     private final TaskDao taskDao = new TaskDao();
 
     @Override
