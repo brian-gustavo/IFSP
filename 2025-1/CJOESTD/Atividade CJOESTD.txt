@@ -1,0 +1,52 @@
+inserir 50
+FB 50 = 0
+
+inserir 40
+50 (40)
+FB 50 = 1, FB 40 = 0
+
+inserir 30
+50 (40 (30))
+FB 50 = 2, FB 40 = 1, FB 30 = 0
+rotação necessária: LL
+40 (30 50)
+FB 40 = 0, FB 30 = 0, FB 50 = 0
+
+inserir 35
+40 (30 (35) 50)
+FB 40 = 1, FB 30 = 1, FB 35 = 0, FB 50 = 0
+
+inserir 34
+40 (30 (35 (34)) 50)
+FB 40 = 2, FB 30 = -2, FB 35 = 1, FB 34 = 0, FB 50 = 0
+rotação necessária: LR
+35 (30 (34) 40 (50))
+FB 35 = 0, FB 30 = -1, FB 34 = 0, FB 40 = -1, FB 50 = 0
+
+
+inserir 33
+35 (30 (34 (33)) 40 (50))
+FB 35 = 1, FB 30 = -2, FB 34 = 1, FB 33 = 0, FB 40 = -1, FB 50 = 0
+rotação necessária: RL
+35 (33 (30 34) 40 (50))
+FB 35 = 1, FB 33 = 0, FB 30 = 0, FB 34 = 0, FB 40 = -1, FB 50 = 0
+
+
+inserir 32
+35 (33 (30 (32) 34) 40 (50))
+FB 35 = 2, FB 33 = 1, FB 30 = -1, FB 32 = 0, FB 34 = 0, FB 40 = -1, FB 50 = 0
+rotação necessária: LL
+33 (30 (32 34) 35 (40 (50)))
+FB 33 = 0, FB 30 = 0, FB 32 = 0, FB 34 = 0, FB 35 = -2, FB 40 = -1, FB 50 = 0
+rotação necessária: RR
+33 (30 (32 34) 40 (35 50))
+FB 33 = 0, FB 30 = 0, FB 32 = 0, FB 34 = 0, FB 40 = 0, FB 35 = 0, FB 50 = 0
+
+
+inserir 31
+
+
+inserir 60
+
+
+inserir 70
