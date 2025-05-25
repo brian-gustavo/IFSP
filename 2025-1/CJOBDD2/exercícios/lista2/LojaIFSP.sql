@@ -65,7 +65,7 @@ INSERT INTO CLIENTES VALUES
   (8, 'Marcelo Souza', 'M', 56, '88888888888', 'marcelo@gmail.com'),
   (10, 'Sheila Pereira', NULL, 21, '10101010101', 'sheila@yahoo.com.br'),
   (11, 'Tiago Augusto', NULL, 70, '20202020202', 'tiago@yahoo.com.br'),
-  (12, 'Maria Pereira', 'F', 45, '30303030303', 'maria@bol.com.br'),
+  (12, 'Maria Pereira', 'F', 45, '30303030303', 'maria@bol.com.br');
 GO
 
 INSERT INTO CLIENTES (ID, Nome, Sexo, Idade, CPF)
