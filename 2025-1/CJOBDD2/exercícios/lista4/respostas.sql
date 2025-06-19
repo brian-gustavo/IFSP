@@ -57,3 +57,5 @@ CREATE TABLE LINHAS (
 ALTER TABLE CLIENTES
 	ADD Data_Nascimento DATE;
 GO
+
+-- Do exercício 4 em diante, não foi possível seguir pois faltam os arquivos para importação que o professor haveria de passar.
