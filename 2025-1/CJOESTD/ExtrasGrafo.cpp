@@ -176,3 +176,166 @@ int main() {
 
     return 0;
 } */
+
+// Algoritmo de Kosaraju (mesma função que o de Tarjan)
+/* #include <iostream>
+#include <vector>
+#include <stack>
+#include <algorithm>
+
+namespace KosarajuSCC {
+    std::vector<std::vector<int>> adj;     
+    std::vector<std::vector<int>> revAdj; 
+    std::vector<bool> visited;             
+    std::stack<int> orderStack;           
+    std::vector<std::vector<int>> sccs;
+    int sccCount;                         
+
+    void dfs1(int u) {
+        visited[u] = true;
+        for (int v : adj[u]) {
+            if (!visited[v]) {
+                dfs1(v);
+            }
+        }
+        orderStack.push(u);
+    }
+
+    void dfs2(int u, std::vector<int>& currentSCC) {
+        visited[u] = true;
+        currentSCC.push_back(u);
+        for (int v : revAdj[u]) {
+            if (!visited[v]) {
+                dfs2(v, currentSCC);
+            }
+        }
+    }
+
+    void runKosaraju(int numVertices) {
+        adj.assign(numVertices, std::vector<int>());
+        revAdj.assign(numVertices, std::vector<int>());
+ 
+        while (!orderStack.empty()) {
+            orderStack.pop();
+        }
+        sccs.clear();
+        sccCount = 0;
+ 
+        visited.assign(numVertices, false); 
+
+        for (int i = 0; i < numVertices; ++i) {
+            if (!visited[i]) {
+                dfs1(i);
+            }
+        }
+
+        visited.assign(numVertices, false); 
+
+        while (!orderStack.empty()) {
+            int u = orderStack.top();
+            orderStack.pop();
+
+            if (!visited[u]) {
+                std::vector<int> currentSCC;
+                dfs2(u, currentSCC);
+                sccs.push_back(currentSCC);
+                sccCount++;
+            }
+        }
+    }
+
+    void addEdge(int u, int v) {
+        adj[u].push_back(v);
+        revAdj[v].push_back(u);
+    }
+
+    int getSCCCount() {
+        return sccCount;
+    }
+
+    const std::vector<std::vector<int>>& getSCCs() {
+        return sccs;
+    }
+} // namespace KosarajuSCC
+
+int main() {
+    int numVertices;
+
+    std::cout << "--- Exemplo de Uso do Kosaraju (Similar ao Exemplo do Tarjan) ---" << std::endl;
+    numVertices = 8;
+    
+    KosarajuSCC::adj.assign(numVertices, std::vector<int>());
+    KosarajuSCC::revAdj.assign(numVertices, std::vector<int>());
+
+    KosarajuSCC::addEdge(0, 1);
+    KosarajuSCC::addEdge(1, 2);
+    KosarajuSCC::addEdge(2, 0);
+
+    KosarajuSCC::addEdge(2, 3);
+
+    KosarajuSCC::addEdge(3, 4);
+    KosarajuSCC::addEdge(4, 5);
+    KosarajuSCC::addEdge(5, 3);
+
+    KosarajuSCC::addEdge(5, 6);
+
+    KosarajuSCC::addEdge(6, 7);
+    KosarajuSCC::addEdge(7, 6);
+
+    KosarajuSCC::runKosaraju(numVertices);
+
+    std::cout << "Numero de Componentes Fortemente Conectadas (CFCs): " << KosarajuSCC::getSCCCount() << std::endl;
+    std::cout << "CFCs encontradas:" << std::endl;
+    int cfc_idx = 1;
+    for (const auto& scc : KosarajuSCC::getSCCs()) {
+        std::cout << "CFC " << cfc_idx++ << ": { ";
+        for (int node : scc) {
+            std::cout << node << " ";
+        }
+        std::cout << "}" << std::endl;
+    }
+
+    std::cout << "\n--- Segundo Exemplo (Grafo Linear) ---" << std::endl;
+    numVertices = 4;
+    KosarajuSCC::adj.assign(numVertices, std::vector<int>());
+    KosarajuSCC::revAdj.assign(numVertices, std::vector<int>());
+    KosarajuSCC::addEdge(0, 1);
+    KosarajuSCC::addEdge(1, 2);
+    KosarajuSCC::addEdge(2, 3);
+
+    KosarajuSCC::runKosaraju(numVertices);
+    std::cout << "Numero de Componentes Fortemente Conectadas (CFCs): " << KosarajuSCC::getSCCCount() << std::endl;
+    std::cout << "CFCs encontradas:" << std::endl;
+    cfc_idx = 1;
+    for (const auto& scc : KosarajuSCC::getSCCs()) {
+        std::cout << "CFC " << cfc_idx++ << ": { ";
+        for (int node : scc) {
+            std::cout << node << " ";
+        }
+        std::cout << "}" << std::endl;
+    }
+
+    std::cout << "\n--- Terceiro Exemplo (Grafo com um grande ciclo) ---" << std::endl;
+    numVertices = 5;
+    KosarajuSCC::adj.assign(numVertices, std::vector<int>());
+    KosarajuSCC::revAdj.assign(numVertices, std::vector<int>());
+    KosarajuSCC::addEdge(0, 1);
+    KosarajuSCC::addEdge(1, 2);
+    KosarajuSCC::addEdge(2, 3);
+    KosarajuSCC::addEdge(3, 4);
+    KosarajuSCC::addEdge(4, 0);
+
+    KosarajuSCC::runKosaraju(numVertices);
+    std::cout << "Numero de Componentes Fortemente Conectadas (CFCs): " << KosarajuSCC::getSCCCount() << std::endl;
+    std::cout << "CFCs encontradas:" << std::endl;
+    cfc_idx = 1;
+    for (const auto& scc : KosarajuSCC::getSCCs()) {
+        std::cout << "CFC " << cfc_idx++ << ": { ";
+        for (int node : scc) {
+            std::cout << node << " ";
+        }
+        std::cout << "}" << std::endl;
+    }
+
+    return 0;
+} */
