@@ -1,0 +1,18 @@
+Nome da empresa: 
+	Kurt COBOL Studios
+
+Descrição: 
+	A Kurt COBOL Studios é uma empresa de videogames fundada por três alunos universitários de ADS, buscando criar jogos que ensinem programação às pessoas leigas na área.
+
+Desafios: 
+	- Baixos recursos financeiros e falta de investidores;
+	- Número reduzido de funcionários, sendo estes sobrecarregados;
+	- Ausência de conhecimento e experiência em gestão empresarial;
+	- Mercado altamente competitivo e dinâmico.
+
+Qualidades: 
+	Apesar dos desafios, os funcionários possuem bom conhecimento da área na qual estão trabalhando, além do setor estar em ascensão contínua e trazer grande potencial de retorno em termos de lucro.
+
+Visão organizacional escolhida: 
+	A estratégia da Kurt COBOL Studios será orientada pela visão baseada em stakeholders; neste caso, as pessoas interessadas em aprender programação, um conhecimento em altíssima demanda pelo mercado de trabalho atualmente e que abre portas para múltiplas oportunidades pessoais e profissionais. Elas obtêm valor através do aprendizado passado pelos jogos, ao mesmo tempo em que são entretidas.
+	Inicialmente, se buscará criar um jogo simples (ou seja, que é possível ser criado com poucos recursos) porém engajante, assim atraindo os primeiros clientes; algo que trará dinheiro para financiar futuros projetos e clientes que irão consumi-los.
