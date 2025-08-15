@@ -1,0 +1,22 @@
+Atividades primárias da empresa:
+	Logística interna - compra do hardware e das ferramentas de software necessárias
+	Operações - programação dos jogos
+	Logística externa - envio para plataformas de distribuição digital
+	Marketing/vendas - campanhas publicitárias nas redes sociais
+	Serviços - atualizações de software (patches)
+
+Atividades de apoio da empresa:
+	Infraestrutura - gestão do ambiente interno por parte dos funcionários do estúdio
+	HRM - estudo de novas ferramentas, treinamento de eventuais novos trabalhadores
+	Desenvolvimento tecnológico - lançamento de novos produtos
+	Aquisições - compra de mais hardware em uma eventual expansão da empresa
+
+Pontos críticos da cadeia de valor:
+	Positivos - operações (bons trabalhadores), marketing/vendas (facilidade de acesso por parte dos clientes, aptidão dos membros do estúdio com o meio, maior alcance ao público-alvo), serviços (disponibilidade para fornecer correções)
+	Neutros - logística externa, desenvolvimento tecnológico
+	Negativos - logística interna (baixos recursos), infraestrutura (falta de conhecimento em gestão), HRM (poucas pessoas), aquisições (sem contatos dentro da indústria, além dos baixos recursos)
+
+Soluções de TI para otimizar a cadeia de valor:
+	Um ERP, para centralizar todos os aspectos relevantes ao gerenciamento da empresa em uma única plataforma e assim não só acelerar o processo como também torná-lo mais intuitivo. Isso otimizaria a infraestrutura.
+	Uso de um marketplace, para obter maior contato com possíveis fornecedores. Isso otimizaria a logística interna e as aquisições.
+	Criação de um repositório interno detalhando os processos da empresa, a documentação dos projetos, instruções das ferramentas utilizadas, etc. Isso otimizaria o HRM, pensando no longo prazo.
