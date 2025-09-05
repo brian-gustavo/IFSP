@@ -1,0 +1,76 @@
+1) Diretoria desconectada da TI
+	Processo COBIT que pode resolver o problema: EDM01
+	Justificativa: O EDM01 alinha a governança de TI com a estratégia de negócio, garantindo com que a gestão compreenda o papel da TI na tomada de decisões.
+	Ação prática para solucionar o desafio: Realizar regularmente workshops entre a diretoria e a TI para discutir estratégias.
+
+2) Metas desalinhadas
+	Processo COBIT que pode resolver o problema: APO02
+	Justificativa: O APO02 define como a estratégia de TI deve se alinhar aos objetivos do negócio.
+	Ação prática para solucionar o desafio: Criar um mapa de alinhamento estratégico que vincule os projetos sendo realizados pela TI aos objetivos que a empresa busca alcançar.
+
+3) Gestão de riscos falha
+	Processo COBIT que pode resolver o problema: APO12
+	Justificativa: O APO12 estabelece práticas para identificar, avaliar, tratar e gerenciar riscos de TI.
+	Ação prática para solucionar o desafio: Implementar uma matriz de riscos (que seja monitorada e revisada constantemente para evitar defasagem).
+
+4) Incidentes frequentes
+	Processo COBIT que pode resolver o problema: DSS02
+	Justificativa: O DSS02 foca na resolução proativa de incidentes que venham a ocorrer, assim minimizando os impactos que eles possam causar às operações.
+	Ação prática para solucionar o desafio: Adotar uma ferramenta de gestão de incidentes, que possam analisar as causas por trás dos incidentes a fim de preveni-las futuramente.
+
+5) Dependência de fornecedores
+	Processo COBIT que pode resolver o problema: APO10
+	Justificativa: O APO10 define critérios para seleção, monitoramento e avaliação de fornecedores.
+	Ação prática para solucionar o desafio: Estabelecer cláusulas contratuais claras e indicadores de desempenho (os chamados Service Level Agreements, ou SLAs) para fornecedores.
+
+6) Uso ineficiente de recursos
+	Processo COBIT que pode resolver o problema: BAI05
+	Justificativa: O BAI05 otimiza o uso de recursos e o gerenciamento de ativos relacionados à TI, com base nas necessidades do negócio.
+	Ação prática para solucionar o desafio: Realizar um inventário de ativos, para melhor rastreá-los e assim acelerar a redistribuição de recursos conforme a demanda.
+
+7) Segurança negligenciada
+	Processo COBIT que pode resolver o problema: DSS06
+	Justificativa: O DSS06 estabelece políticas de gerenciamento de segurança da informação que controlam e protegem dados sensíveis.
+	Ação prática para solucionar o desafio: Desenvolver uma política interna de segurança de dados, treinando colaboradores para que possam utilizá-la em suas atividades.
+
+8) Ausência de indicadores
+	Processo COBIT que pode resolver o problema: MEA01
+	Justificativa: O MEA01 define métricas de desempenho que tornam possível a avaliação interna da contribuição do setor de TI para as atividades da empresa.
+	Ação prática para solucionar o desafio: Implementar Key Performance Indicators (KPIs), como nível satisfação dos usuários e tempo de disponibilidade dos sistemas.
+
+9) Orçamento estourado
+	Processo COBIT que pode resolver o problema: APO08
+	Justificativa: O APO08 gerencia recursos financeiros, de forma a controlar custos e garantir que projetos estejam dentro do orçamento definido.
+	Ação prática para solucionar o desafio: Implantar um Project Management Office (PMO) que possua metodologias de controle financeiro, como os stage gates (que servem como uma espécie de "checkpoint" entre etapas de um projeto).
+
+10) Inovação travada
+	Processo COBIT que pode resolver o problema: APO03
+	Justificativa: O APO03 gerencia a arquitetura empresarial, ajudando a priorizar iniciativas de inovação que estejam alinhadas ao negócio.
+	Ação prática para solucionar o desafio: Criar um comitê de inovação com a diretoria e os representantes da TI.
+
+11) Conformidade ignorada
+	Processo COBIT que pode resolver o problema: MEA03
+	Justificativa: O MEA03 monitora e avalia o compliance, assegurando que a empresa atenda os requisitos legais como a LGPD.
+	Ação prática para solucionar o desafio: Realizar auditorias regulares para garantir a conformidade dos processos.
+
+12) Falta de continuidade
+	Processo COBIT que pode resolver o problema: DSS04
+	Justificativa: O DSS04 estabelece planos de contingência para que haja continuidade das operações em caso de incidentes.
+	Ação prática para solucionar o desafio: Desenvolver, testar e atualizar conforme necessário um plano de contingência customizado para a situação da empresa.
+
+13) Comunicação fraca
+	Processo COBIT que pode resolver o problema: APO07
+	Justificativa: O APO07 gerencia as relações humanas, melhorando a comunicação e interação entre diferentes setores, como o TI e as áreas de negócio.
+	Ação prática para solucionar o desafio: Promover reuniões periódicas, além de estabelecer canais diretos de comunicação entre setores.
+
+14) Documentação inexistente
+	Processo COBIT que pode resolver o problema: BAI10
+	Justificativa: O BAI10 gerencia conhecimento, garantindo que processos e procedimentos sejam documentados apropriadamente.
+	Ação prática para solucionar o desafio: Criar um repositório central de documentação, e incentivar os colaboradores para que utilizem-no.
+
+15) Projetos abandonados
+	Processo COBIT que pode resolver o problema: BAI01
+	Justificativa: O BAI01 gerencia o ciclo de vida dos projetos, para garantir sua conclusão.
+	Ação prática para solucionar o desafio: Adotar metodologias ágeis de gestão de projetos, como o Scrum, para garantir que as etapas sejam sempre revisadas visando assegurar a continuidade dos processos.
+
+NOTA: Esta atividade foi feita em grupo entre Brian, Luiz Henrique, Nolan, Cauan e Tiago.
