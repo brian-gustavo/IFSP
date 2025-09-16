@@ -29,6 +29,7 @@ public class Task {
 
     @ManyToOne
     @JoinColumn(name = "category_id")
+    @NotNull(message = "A tarefa deve possuir uma categoria")
     private Category category;
 
     @ManyToOne
