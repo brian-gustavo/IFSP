@@ -6,14 +6,14 @@ prazos estabelecidos, atrasando as entregas dos materiais.
 
 Solução ao primeiro problema com CRM:
 	É possível fazer com que sejam implementados formulários de feedback nas diferentes redes sociais do estúdio, que serão centralizados pelo CRM. Assim, ficará mais fácil de acompanhar os relatos, pois não será mais 
-necessário verificar múltiplos lugares para saber se houveram conversas sobre o produto. Além disso, através do uso de tal plataforma pode-se segmentar os diferentes tipos de ocorrências registradas, para maior conveniência 
-(e subsequentemente, mais velocidade nos updates) posteriormente.
+necessário verificar múltiplos lugares para saber se houveram conversas sobre o produto. Além disso, através do uso de tal plataforma pode-se segmentar os diferentes tipos de ocorrências registradas, para maior 
+conveniência (e subsequentemente, mais velocidade nos updates) posteriormente.
 
 Solução ao segundo problema com SCM: 
 	Com o SCM, é possível estabelecer um canal de comunicação constante com o fornecedor, e através das funcionalidades de gestão de estoque, pode-se saber com antecedência quais áreas estão deficitárias e precisarão de 
-upgrades eventualmente. Isso tornará as entregas mais flexíveis; se e quando ocorrerem novos imprevistos, poderá haver maior espaço para conversa entre as duas partes com o intuito de chegar a uma solução que funcione para 
-ambas.
+upgrades eventualmente. Isso tornará as entregas mais flexíveis; se e quando ocorrerem novos imprevistos, poderá haver maior espaço para conversa entre as duas partes com o intuito de chegar a uma solução que funcione 
+para ambas.
 
 Como as soluções se integram:
-	Não perdendo tempo ao tentar investigar os atrasos constantes, será viável dedicar maior atenção aos clientes, já que a estrutura da empresa é limitada e os funcionários precisam atender vários setores ao mesmo tempo. A 
-otimização dos processos, no geral, lhes permitirá focar seus esforços no desenvolvimento dos jogos, assim trazendo retornos mais rapidamente e tornando possível sua continuidade dentro do mercado.
+	Não perdendo tempo ao tentar investigar os atrasos constantes, será viável dedicar maior atenção aos clientes, já que a estrutura da empresa é limitada e os funcionários precisam atender vários setores ao mesmo 
+tempo. A otimização dos processos, no geral, lhes permitirá focar seus esforços no desenvolvimento dos jogos, assim trazendo retornos mais rapidamente e tornando possível sua continuidade dentro do mercado.
