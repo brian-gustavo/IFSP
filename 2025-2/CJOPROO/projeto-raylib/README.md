@@ -1,4 +1,4 @@
-Caso você queira apenas rodar o jogo: baixe o game.exe, os arquivos .dll da pasta lib e os assets.
+Caso você queira apenas rodar o jogo: baixe o game.exe, os arquivos .dll da pasta lib e os assets (ponha numa pasta com esse nome, ou eles não serão carregados no jogo).
 
 Caso você queira modificar o jogo: baixe tudo MENOS o game.exe, que deve ser buildado* em sua máquina conforme alterações forem sendo feitas (as instruções estão comentadas em main.cpp).
 Além disso, baixe também a biblioteca Raylib através de seu instalador no itch.io, e quaisquer compiladores/extensões/etc. que sejam necessários para seu VS Code (ou sua IDE de preferência).
