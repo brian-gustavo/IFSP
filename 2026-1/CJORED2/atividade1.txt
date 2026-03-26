@@ -1,0 +1,26 @@
+1. Quando precisamos usar o usuário root?
+R: Quando for necessário realizar alguma operação sensível na máquina, tendo em vista que o usuário comum não possuirá autorização para tal por motivos de segurança. O usuário root é o administrador (ou superusuário), que está liberado para utilizar qualquer comando e realizar qualquer ação que se mostre necessária em algum determinado momento.
+
+2. Por que nunca devemos usar o usuário root para tarefas rotineiras de usuário comum?
+R: Como o usuário root possui todas as ações e comandos liberados para si, isso significa que ele está mais vulnerável à brechas (já que muitas das possíveis interações nocivas que podem vir a ocorrer, tanto em relação ao ambiente interno da máquina quanto ao externo, estão barradas ao usuário comum). Não é necessário utilizar o root para realizar nenhuma tarefa rotineira, portanto a prática traz apenas malefícios.
+
+3. Qual a função do comando "su" e quando devemos utilizá-lo?
+R: "su" significa "switch user" (do inglês "trocar de usuário"), e o comando em questão permite a mudança do usuário ativo durante o uso da máquina (por exemplo, um usuário comum querendo trocar pro root, ou vice-versa). Deve ser utilizado quando é necessário realizar alguma ação que foge do escopo de determinado usuário, como realizar uma tarefa rotineira enquanto o root está ativo ou instalar/desinstalar algum pacote enquanto o usuário comum está ativo.
+
+4. Qual a função dos comandos "passwd", "userdel" e "useradd"?
+R: "passwd" troca a senha de um determinado usuário, "userdel" deleta um usuário (além de todos os dados vinculados) e "useradd" adiciona um novo usuário ao sistema.
+
+5. Muitos comandos básicos do Linux são iguais (ou similares) aos do DOS. Liste alguns desses comandos e descreva suas respectivas funções:
+R: Três comandos similares entre o Linux e o DOS são o "cd", o "mkdir" e o "rmdir". Respectivamente, eles trocam o diretório no qual um usuário atualmente se encontra, criam um novo diretório e removem um diretório.
+
+6: O que é shell script?
+R: É uma linguagem de script, usada especificamente para interagir com um shell (conforme explicado no texto que acompanha as atividades), especialmente em sistemas Unix. Sua função é permitir a inserção de trechos de código que serão interpretados pelo shell de modo a retornar algum determinado resultado.
+
+7: Podemos usar os comandos que treinamos em shell scripts?
+R: Sim. O intuito dos shell scripts é executar trechos de código mais elaborados, mas é perfeitamente possível utilizar comandos de terminal dentro de um, especialmente caso seja necessário acionar vários de maneira sucessiva.
+
+8: Quando os shell scripts são utilizados?
+R: Conforme explicado anteriormente, seu uso geralmente ocorre quando há a necessidade de executar trechos de código elaborados ou acionar vários comandos de terminal de maneira sucessiva.
+
+9: Quais são as linguagens de shell script disponíveis no Linux?
+R: Existem várias. As duas mais populares são o Bash e o Sh, sendo que a primeira é a que vem por padrão na maior parte das distribuições Linux e a segunda é a linguagem de shell script original do Unix.
