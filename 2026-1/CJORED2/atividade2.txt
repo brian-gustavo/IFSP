@@ -1,0 +1,17 @@
+1. No Vim, qual é o comando necessário para substituirmos todas as instâncias de uma determinada palavra em um arquivo (exemplo: "ifsp") por outra palavra (exemplo: "linux")?
+R: Utilizando o modo de comandos, deve-se inserir a string ":%s/[palavra a ser substituída]/[nova palavra]/g". Neste caso em específico, a string seria ":%s/ifsp/linux/g".
+
+2. Ao usar o Vim, como salvar todas as mudanças feitas em um arquivo?
+R: No modo de comandos, utiliza-se o comando :w para salvar todas as mudanças e permanecer no editor. Caso o usuário queira sair logo após salvar, pode-se utilizar também :wq.
+
+3. O que é o vi/Vim? Podemos encontrá-lo em qualquer distribuição Linux (ou Unix)?
+R: O vi é um editor de texto, sendo o Vim sua versão melhorada (vi improved). Sim, pode ser encontrado em qualquer distribuição Linux/Unix, mas talvez necessite de um download adicional ao invés de ser o editor padrão do sistema (por exemplo, em Debian, cujo editor padrão é o nano).
+
+4. Podemos editar arquivos em ASCII ou binário dentro do Vim?
+R: Sim, apesar de ser recomendado editar arquivos binários em modo hexadecimal (através do comando xxd) para evitar possíveis erros ou modificações acidentais.
+
+5. Qual a diferença entre o modo de comandos e o modo de edição no Vim? Como podemos alternar entre eles?
+R: O modo de edição funciona como um editor de texto normal (tal qual o nano); já o modo de comandos não edita diretamente o arquivo, e sim permite a inserção de comandos (através de determinadas teclas ou strings, dependendo do que se deseja fazer) que podem ser utilizados para interagir com o conteúdo do arquivo, eventualmente sendo capazes de alterá-lo. Para alternar entre os diferentes modos, se usa a tecla Insert, a tecla A ou a tecla I no modo de comandos e a tecla Esc no modo de edição.
+
+6. Quais foram suas principais dificuldades ao usar o Vim?
+R: Minha principal dificuldade, como alguém que não está habituado ao Linux e costuma utilizar editores de texto como o bloco de notas do Windows (ou até mesmo processadores de texto como o Word), foi em relação aos comandos. Já que o editor em si não instrui o usuário a utilizá-lo, deve-se buscar tal informação por meios externos (em meu caso, as instruções foram fornecidas pelo professor), algo que não acontece com outras ferramentas.
