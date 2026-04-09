@@ -1,0 +1,14 @@
+1. O que acontece ao digitar "help var" no terminal do Linux?
+R: São fornecidas breves informações sobre algumas das variáveis mais comuns no shell utilizado.
+
+2. O que acontece ao digitar "cp --help | less" no terminal do Linux?
+R: O comando --help fornece breves informações sobre o comando cp, e o parâmetro less divide tais informações em "páginas" ao invés de carregar tudo de uma só vez.
+
+3. O que acontece ao digitar "unzip --info" no terminal do Linux?
+R: São fornecidas breves informações sobre o comando unzip, como se fosse uma man page encurtada.
+
+4. O que é o comando man? Pode ser encontrado em qualquer distribuição Linux (ou Unix)?
+R: O comando man mostra as man pages do sistema operacional, que são as páginas de manual para seus comandos. Sim, pode ser encontrado em qualquer distribuição Linux, mas talvez precise ser instalado separadamente ao invés de ser um componente padrão.
+
+5. Qual a diferença entre os comandos --help e --info?
+R: Praticamente nenhuma. Contudo, nem todos os comandos aceitam --info, o que não é o caso para --help.
