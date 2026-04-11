@@ -21,13 +21,18 @@ export default class GameScene extends Phaser.Scene {
 
         this.createPlayer();
 
+        this.targetPosition = new Phaser.Math.Vector2(
+            this.player.x,
+            this.player.y
+        );
+
         this.input.mouse.disableContextMenu();
 
         this.setupTouchEvents();
     }
 
     update(time, delta) {
-        // TODO
+        this.playerManager(time);
     }
 
     createBackground() {
@@ -39,32 +44,61 @@ export default class GameScene extends Phaser.Scene {
     }
 
     createPlayer() {
-        this.player = this.physics.add.sprite(
-            this.config.width = 0.5,
-            300,
-            'player'
-        )
+        this.player = this.physics.add.sprite(this.config.width = 0.5, 300, 'player').setOrigin(0.5, 0.5);
+
+        this.player.setDamping(true);
+
+        this.player.setDrag(this.playerDrag);
 
         this.player.setCollideWorldBounds(true);
     }
 
     setupTouchEvents() {
        this.input.on('pointerdown', (pointer) => {
-            console.log("Tela tocada em X: ${pointer.x} e Y: ${pointer.y}!");
+            this.targetPosition.set(pointer.x, pointer.y);
 
-            this.player.setPosition(pointer.x, pointer.y);
+            const xMark = this.add.text(pointer.x, pointer.y, 'X', {
+                font: '60px Arial',
+                fill: '#ff0000'
+            }).setOrigin(0.5);
+
+            this.time.delayedCall(3000, () => xMark.destroy());
        })
+    }
 
-       this.input.on('pointerup', (pointer) => {
-            console.log("Toque liberado!");
-       })
+    playerManager(time) {
+        this.player.y += Math.cos((time / 1000) * 2) + 0.5;
 
-       this.input.on('pointermove', (pointer) => {
-            if (pointer.isDown) {
-                console.log("Arrastando toque para X: ${pointer.x} e Y: ${pointer.y}!");
+        const distance = Phaser.Math.Distance.Between(
+            this.player.x,
+            this.player.y,
+            this.targetPosition.x,
+            this.targetPosition.y
+        );
 
-                this.player.setPosition(pointer.x, pointer.y);
-            }
-       })
+        if (distance > this.minDistance) {
+            const angle = Phaser.Math.Angle.Between(
+                this.player.x,
+                this.player.y,
+                this.targetPosition.x,
+                this.targetPosition.y
+            );
+
+            this.player.rotation = Phaser.Math.Angle.RotateTo(
+                this.player.rotation,
+                angle + Phaser.Math.DegToRad(-90),
+                0.03
+            );
+
+            const moveAngle = this.player.rotation - Phaser.Math.DegToRad(-90);
+
+            const velocity = this.physics.velocityFromRotation(
+                moveAngle,
+                this.playerSpeed,
+                this.player.body.velocity
+            );
+        } else {
+            this.player.body.setVelocity(0, 0);
+        }
     }
 }
