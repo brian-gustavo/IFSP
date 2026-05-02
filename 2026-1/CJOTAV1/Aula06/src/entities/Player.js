@@ -8,6 +8,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         this.init();
     }
+
     init() {
         this.scene.add.existing(this);
 
@@ -24,7 +25,5 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         // TODO...
     }
 
-    // Funções auxiliares
-    
-    // TODO...
+    // Funções auxiliares — TODO...
 }
