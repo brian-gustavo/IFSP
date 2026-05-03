@@ -9,15 +9,13 @@ export default class PreloadScene extends Phaser.Scene {
         this.displayProgressBar();
 
         this.load.image('background', 'assets/images/background.png');
-        this.load.image('fence', 'assets/images/cerca.png');
-        this.load.image('player', 'assets/images/mineiro.png');
 
-        this.load.image('enemy_idle1', 'assets/images/idle1.png');
-        this.load.image('enemy_idle2', 'assets/images/idle2.png');
-        this.load.image('enemy_idle3', 'assets/images/idle3.png');
-        this.load.image('enemy_idle4', 'assets/images/idle4.png');
-        this.load.image('enemy_idle5', 'assets/images/idle5.png');
-        this.load.image('enemy_idle6', 'assets/images/idle6.png');
+        this.load.image('enemy_idle1', 'assets/images/enemy/idle_1.png');
+        this.load.image('enemy_idle2', 'assets/images/enemy/idle_2.png');
+        this.load.image('enemy_idle3', 'assets/images/enemy/idle_3.png');
+        this.load.image('enemy_idle4', 'assets/images/enemy/idle_4.png');
+        this.load.image('enemy_idle5', 'assets/images/enemy/idle_5.png');
+        this.load.image('enemy_idle6', 'assets/images/enemy/idle_6.png');
     }
 
     create() {
