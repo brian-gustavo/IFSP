@@ -1,0 +1,38 @@
+1. Qual o efeito observável da compactação de um arquivo?
+R: O arquivo passa a ter os mesmos dados de quando estava em sua forma original (mesmo que necessitando de uma posterior descompactação para acessá-los na íntegra), porém de forma a ocupar menos espaço no sistema.
+
+2. Qual o efeito observável da descompactação de um arquivo?
+R: Se torna possível recuperar todas as informações de um arquivo que foi anteriormente compactado, incluindo eventuais metadados, sem perdas no processo.
+
+3. Quais as diferenças entre o zip comum e o bzip?
+R: O zip comum compacta mais rápido (portanto, indicado para arquivos menores), mas o bzip é muito mais eficiente na compactação (logo, cumpre melhor seu propósito de modo geral, especialmente em relação a arquivos maiores).
+
+4. Qual o efeito observável do uso do comando tar?
+R: O tar, por padrão, não comprime arquivos como o zip ou o bzip. Ao invés disso, ele aglutina vários arquivos em um só, contendo todos os dados em formato sequencial.
+
+5. Comparando o tamanho em bytes de três arquivos PDF em relação ao tar desses mesmos três arquivos, o que pode ser observado?
+R: Devido aos metadados que são inseridos em cada uma das partes que compõem o tar (isto é, as seções correspondentes aos arquivos originais que foram aglutinados), não só não há a compressão quando o tar é usado sem zip/bzip, mas na verdade a tendência é aumentar o tamanho do arquivo resultante.
+
+6. Qual o efeito observável do uso do comando tar com o parâmetro -x?
+R: Tal qual um algoritmo de compactação, todas as informações originais de um arquivo são preservadas após o tar. Tal fato é demonstrado na prática após efetuar a extração (que é o intuito do parâmetro -x) de parte ou todo do arquivo .tar gerado.
+
+7. Existe alguma diferença notável na execução entre o zip e o bzip (ou gzip em versões mais antigas do Linux, etc.)?
+R: Além dos comandos e das particularidades individuais de cada algoritmo, não. Os princípios da compactação e da descompactação funcionam da mesma forma.
+
+8. Qual o efeito de combinar o comando tar com algum parâmetro (como -j) para aplicar compactação ao arquivo resultante?
+R: Tal ação extrai a eficiência máxima da compactação, pois permite que ela seja feita a partir de um arquivo só ao invés de vários arquivos menores fragmentados. É ideal para backups de dados, por exemplo. 
+
+9. Qual o comando que permite aglutinar vários arquivos em um só?
+R: É o comando tar.
+
+10. Qual o formato do comando que se deve utilizar para exibir o conteúdo de um arquivo .tar?
+R: tar -tf [nome do arquivo .tar] (ou tar -tvf [nome do arquivo .tar], para exibir com maiores detalhes)
+
+11. Qual dos compactadores apresentados permite maior taxa de compressão?
+R: É o bzip.
+
+12. Podemos compactar um arquivo numa workstation e descompactá-lo posteriormente num PC? Explique.
+R: Sim. O conteúdo do arquivo continua sendo o mesmo (e sem perdas em relação ao original) independente de onde ele é acessado, apenas é necessário o algoritmo de compactação/descompactação para restaurar tal informação.
+
+13. Qual a importância da existência das diversas ferramentas de compactação no Linux/Unix?
+R: Existem diversas utilidades para ferramentas de compactação, especialmente se considerarmos a questão de otimização – afinal de contas, o ideal é sempre poupar o máximo de espaço possível – e da eventual distribuição de conteúdo para terceiros, seja online ou através de qualquer outro método. Os dois principais algoritmos acessíveis no Linux/Unix tem seus prós e contras bem definidos, o que permite um usuário a optar pelo método que mais irá lhe beneficiar em algum determinado contexto, assim fornecendo maior flexibilidade e versatilidade de uso (conforme é a proposta do sistema).
