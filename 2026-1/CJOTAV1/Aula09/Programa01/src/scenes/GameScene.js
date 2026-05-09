@@ -12,9 +12,11 @@ export default class GameScene extends Phaser.Scene {
     }
 
     create() {
-        this.createBackground();
+        const width = this.sys.game.config.width;
+        const height = this.sys.game.config.height;
 
-        this.createEnemy();
+        this.add.image(width * 0.5, height * 0.5, 'background');
+        this.createEnemy(width, height);
 
         const centerX = this.cameras.main.width / 2;
         const centerY = this.cameras.main.height / 2;
@@ -39,22 +41,22 @@ export default class GameScene extends Phaser.Scene {
         );
     }
 
-    createEnemy() {
+    createEnemy(w, h) {
         this.enemy = this.add.sprite(
-            this.config.width * 0.5,
-            this.config.height * 0.5,
-            'enemy_idle_1'
+            w * 0.5,
+            h * 0.5,
+            'enemy_idle1'
         ).setScale(2);
 
         this.anims.create({
             key: 'enemy_idle',
             frames: [
-                {key: 'enemy_idle_1'},
-                {key: 'enemy_idle_2'},
-                {key: 'enemy_idle_3'},
-                {key: 'enemy_idle_4'},
-                {key: 'enemy_idle_5'},
-                {key: 'enemy_idle_6'}
+                {key: 'enemy_idle1'},
+                {key: 'enemy_idle2'},
+                {key: 'enemy_idle3'},
+                {key: 'enemy_idle4'},
+                {key: 'enemy_idle5'},
+                {key: 'enemy_idle6'}
             ],
             frameRate: 4,
             repeat: -1

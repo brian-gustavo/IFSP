@@ -12,14 +12,7 @@ const SHARED_CONFIG = {
     debug: false
 }
 
-const SCENES = {
-    PreloadScene,
-    GameScene
-}
-
-const createScene  = Scene => new Scene(SHARED_CONFIG);
-
-const initScenes = () => SCENES.map(createScene);
+const SCENES = [PreloadScene, GameScene];
 
 const config = {
     type: Phaser.AUTO,
@@ -31,14 +24,14 @@ const config = {
         default: 'arcade',
         arcade: {
             gravity: {y: 300},
-            debug: SHARED_CONFIG['debug'],
+            debug: SHARED_CONFIG.debug,
         }
     },
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH 
     },
-    scene: initScenes()
+    scene: SCENES 
 };
 
 new Phaser.Game(config);

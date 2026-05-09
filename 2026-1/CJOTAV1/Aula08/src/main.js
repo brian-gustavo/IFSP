@@ -9,7 +9,7 @@ const HEIGHT = 700;
 const SHARED_CONFIG = {
     width: WIDTH,
     height: HEIGHT,
-    debug: true
+    debug: false
 }
 
 const SCENES = [

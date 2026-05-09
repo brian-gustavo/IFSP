@@ -14,6 +14,7 @@ export default class GameScene extends Phaser.Scene {
         this.targetPosition = null;
         this.playerSpeed = 100;
         this.playerDrag = 0.95;
+        this.minDistance = 10;
     }
 
     create() {
@@ -44,7 +45,7 @@ export default class GameScene extends Phaser.Scene {
     }
 
     createPlayer() {
-        this.player = this.physics.add.sprite(this.config.width = 0.5, 300, 'player').setOrigin(0.5, 0.5);
+        this.player = this.physics.add.sprite(this.config.width * 0.5, 300, 'player').setOrigin(0.5, 0.5);
 
         this.player.setDamping(true);
 

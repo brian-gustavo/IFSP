@@ -1,7 +1,5 @@
 import Phaser from 'phaser';
 
-import Player from '../entities/Player.js';
-
 export default class GameScene extends Phaser.Scene {
     constructor(config) {
         super({key: 'GameScene'}, config);
@@ -13,7 +11,7 @@ export default class GameScene extends Phaser.Scene {
         this.cursors = null;
 
         this.player = null;
-        this.playerSpeed = 50;
+        this.playerSpeed = 200;
 
         this.cheese = null;
         this.cheesesCollected = 0;
@@ -64,7 +62,7 @@ export default class GameScene extends Phaser.Scene {
 
     createPlayer() {
         this.player = this.physics.add.sprite(
-            this.config.width = 0.5, 
+            this.config.width * 0.5, 
             300, 
             'player'
         );
@@ -95,10 +93,8 @@ export default class GameScene extends Phaser.Scene {
 
         if (this.cursors.up.isDown) {
             this.player.setVelocityY(-this.playerSpeed);
-            this.player.flipY = true;
         } else if (this.cursors.down.isDown) {
             this.player.setVelocityY(this.playerSpeed);
-            this.player.flipY = false;
         }
     }
 

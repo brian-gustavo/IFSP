@@ -42,7 +42,7 @@ export default class GameScene extends Phaser.Scene {
 
     createPlayer() {
         this.player = this.physics.add.sprite(
-            this.config.width = 0.5,
+            this.config.width * 0.5,
             300,
             'player'
         )

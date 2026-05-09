@@ -17,10 +17,6 @@ const SCENES = [
     GameScene
 ]
 
-const createScene  = Scene => new Scene(SHARED_CONFIG);
-
-const initScenes = () => SCENES.map(createScene);
-
 const config = {
     type: Phaser.AUTO,
     ...SHARED_CONFIG,
@@ -38,7 +34,7 @@ const config = {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH 
     },
-    scene: initScenes()
+    scene: [PreloadScene, GameScene]
 };
 
 new Phaser.Game(config);

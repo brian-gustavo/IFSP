@@ -1,6 +1,6 @@
 import Cangaceiro from "./Cangaceiro.js";
 
-console.log("\n=> Playing... The Calango Hunter \n");
+console.log("\n=> Playing: The Calango Hunter \n");
 
 const player = new Cangaceiro("Walter Paraíba", "peixeira", "Lampião", "calango");
 

@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
-import Player from '../entities/Player';
+import Player from '../entities/Player.js';
 
 export default class GameScene extends Phaser.Scene {
     constructor(config) {
@@ -10,17 +10,23 @@ export default class GameScene extends Phaser.Scene {
     }
 
     init() {
-        // TODO...
+        this.cursors = this.input.keyboard.createCursorKeys();
     }
 
     create() {
+        const { width, height } = this.sys.game.config;
+    
+        this.config = { width, height };
+
         this.createBackground();
 
-        this.createPlayer;
+        this.createPlayer();
     }
 
     update(time, delta) {
-        // TODO...
+        if (this.player && this.player.update) {
+            this.player.update(this.cursors);
+        }
     }
 
     createBackground() {
