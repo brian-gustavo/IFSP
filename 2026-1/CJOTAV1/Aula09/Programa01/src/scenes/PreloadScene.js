@@ -9,8 +9,6 @@ export default class PreloadScene extends Phaser.Scene {
         this.displayProgressBar();
 
         this.load.image('background', 'assets/images/background.png');
-        this.load.image('fence', 'assets/images/cerca.png');
-        this.load.image('player', 'assets/images/mineiro.png');
 
         this.load.image('enemy_idle1', 'assets/images/idle1.png');
         this.load.image('enemy_idle2', 'assets/images/idle2.png');
