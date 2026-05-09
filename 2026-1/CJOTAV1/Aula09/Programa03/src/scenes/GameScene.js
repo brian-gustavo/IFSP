@@ -57,6 +57,22 @@ export default class GameScene extends Phaser.Scene {
         });
     }
 
+    update() {
+        const { left, right, up, down, space } = this.cursorKeys;
+
+        const isUpJustDown = Phaser.Input.Keyboard.JustDown(up);
+
+        const isSpaceJustDown = Phaser.Input.Keyboard.JustDown(space);
+
+        const playerOnFloor = this.player.body.onFloor();
+
+        const currentPlayerAnim = this.player.anims.currentAnim?.key;
+
+        const isPlayerPlaying = animKey => this.player.anims.isPlaying && currentPlayerAnim === animKey;
+
+        // TODO...
+    }
+    
     createBackground() {
         this.add.image(
             this.config.width * 0.5,
@@ -86,21 +102,5 @@ export default class GameScene extends Phaser.Scene {
         });
 
         this.enemy.play('cleave');
-    }
-
-    update() {
-        const { left, right, up, down, space } = this.cursorKeys;
-
-        const isUpJustDown = Phaser.Input.Keyboard.JustDown(up);
-
-        const isSpaceJustDown = Phaser.Input.Keyboard.JustDown(space);
-
-        const playerOnFloor = this.player.body.onFloor();
-
-        const currentPlayerAnim = this.player.anims.currentAnim?.key;
-
-        const isPlayerPlaying = animKey => this.player.anims.isPlaying && currentPlayerAnim === animKey;
-
-        // TODO...
     }
 }
