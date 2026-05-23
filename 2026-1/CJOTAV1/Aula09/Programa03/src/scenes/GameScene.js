@@ -59,9 +59,7 @@ export default class GameScene extends Phaser.Scene {
 
     update() {
         const { left, right, up, down, space } = this.cursorKeys;
-
         const isUpJustDown = Phaser.Input.Keyboard.JustDown(up);
-
         const isSpaceJustDown = Phaser.Input.Keyboard.JustDown(space);
 
         const playerOnFloor = this.player.body.onFloor();
@@ -70,7 +68,75 @@ export default class GameScene extends Phaser.Scene {
 
         const isPlayerPlaying = animKey => this.player.anims.isPlaying && currentPlayerAnim === animKey;
 
-        // TODO...
+        if (left.isDown) {
+            this.player.setVelocityX(-this.playerSpeed);
+            this.player.setFlipX(true);
+
+            if (!isPlayerPlaying('player_run') && playerOnFloor) {
+                this.player.play('player_run', true);
+            }
+        }
+        else if (right.isDown) {
+            this.player.setVelocityX(this.playerSpeed);
+            this.player.setFlipX(false);
+
+            if (!isPlayerPlaying('player_run') && playerOnFloor) {
+                this.player.play('player_run', true);
+            }
+        }
+        else {
+            this.player.setVelocityX(0);
+
+            if (!isPlayerPlaying('player_idle') && playerOnFloor) {
+                this.player.play('player_idle', true);
+            }
+        }
+
+        if (isUpJustDown && playerOnFloor) {
+            this.player.setVelocityY(-this.playerJumpForce);
+            this.player.play('player_jump', true);
+        }
+
+        if (isSpaceJustDown) {
+            this.player.setVelocityX(0);
+            this.player.play('player_attack', true);
+        }
+
+        if (!playerOnFloor && this.player.body.velocity.y > 0) {
+            this.player.play('player_fall', true);
+        }
+
+        this.enemy.setVelocityX(this.enemyDirection * this.enemySpeed);
+
+        if (this.enemy.body.blocked.left) {
+            this.enemyDirection = 1;
+            this.enemy.setFlipX(false);
+        }
+
+        if (this.enemy.body.blocked.right) {
+            this.enemyDirection = -1;
+            this.enemy.setFlipX(true);
+        }
+
+        const distance = Phaser.Math.Distance.Between(
+            this.player.x,
+            this.player.y,
+            this.enemy.x,
+            this.enemy.y
+        );
+
+        if (distance < this.distanceToAttack) {
+            this.enemy.setVelocityX(0);
+
+            if (this.enemy.anims.currentAnim?.key !== 'enemy_attack') {
+                this.enemy.play('enemy_attack', true);
+            }
+        }
+        else {
+            if (this.enemy.anims.currentAnim?.key !== 'enemy_walk') {
+                this.enemy.play('enemy_walk', true);
+            }
+        }
     }
     
     createBackground() {
@@ -82,7 +148,7 @@ export default class GameScene extends Phaser.Scene {
     }
 
     createEnemy() {
-        this.enemy = this.add.sprite(
+        this.enemy = this.physics.add.sprite(
             this.config.width * 0.5,
             this.config.height * 0.5,
             'enemy'
@@ -102,5 +168,13 @@ export default class GameScene extends Phaser.Scene {
         });
 
         this.enemy.play('cleave');
+    }
+
+    createGround() {
+
+    }
+
+    createEnemy() {
+        
     }
 }
