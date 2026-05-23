@@ -1,0 +1,99 @@
+1. Qual a importância da área de swap nos ambientes Linux/Unix?
+R: É importante ter uma área de swap pois ela permite o uso da memória swap, que é uma memória virtual (ou seja, utiliza o disco rígido). Esta memória entra em ação quando a RAM do computador está sobrecarregada, para que ainda seja possível utilizar o sistema operacional. Conforme o nome indica ("swap" é "troca" em inglês), ela "troca" processos inativos da RAM consigo mesma, permitindo que esta seja liberada e continue funcionando normalmente.
+
+2. O que pode ser feito na aba "Hardware" das configurações do Linux?
+R: Nesta aba, podem ser alteradas quaisquer configurações referentes ao hardware, seja o computador em si ou eventuais dispositivos acoplados (impressora, disquetes...) – mas vale notar que nem todas distribuições possuem tal aba. O Debian em sua versão mais recente, por exemplo, coloca tais configurações em abas individuais para cada tipo de dispositivo externo.
+
+3. Onde é possível adicionar ou remover usuários do sistema, no Linux?
+R: No Debian mais recente, basta simplesmente ir nas configurações, entrar na aba Sistema e então selecionar a aba de Usuários que aparece. Contudo, também é possível fazer essa ação através do terminal (useradd e userdel), garantindo que não seja necessária qualquer distribuição específica para poder utilizar tal funcionalidade.
+
+4. O que viria a ser um profile (perfil), no contexto do Linux?
+R: É um perfil de usuário. Cada pessoa que utilize um sistema Linux idealmente deve ter seu próprio perfil, mesmo que compartilhe a máquina com outros. Isso permite que o administrador do sistema configure permissões conforme necessário, além de moldar o ambiente que aquele usuário utilizará de modo geral.
+
+5. Qual a importância de utilizar ou não o formato Microsoft ao trabalhar com alternativas como OpenOffice?
+R: Alternativas ao pacote Office da Microsoft (como o OpenOffice ou LibreOffice) buscam justamente suprir a necessidade do original de forma mais acessível, efetuando mudanças quando necessitam ou observam que elas permitem melhor uso da aplicação. Porém, seus desenvolvedores reconhecem que atualmente o Office é quem domina o mercado, portanto muitos ainda estão acostumados com seu uso; logo, observam a possibilidade de adaptar seus próprios produtos para se encaixar nessa norma e assim atrair usuários que querem usufruir de tal ferramenta mas sem abrir mão de poder se comunicar com outras pessoas. Daí que vem a importância de utilizar ou não o formato Microsoft, sendo que diferentes pessoas evidentemente terão abordagens diferentes dependendo de suas necessidades.
+
+6. Um arquivo criado utilizando o OpenOffice, dentro de um ambiente Linux, é binariamente compatível com um arquivo equivalente criado no ecossistema da Microsoft?
+R: Caso o usuário opte por utilizar o formato Microsoft, sim. Caso contrário, não.
+
+7. Descreva a função e/ou arquivos que podem ser encontrados nos seguintes diretórios padrão de um sistema Linux.
+/ – diretório raiz, contendo todos os outros
+/bin – contém os arquivos da maioria dos comandos acessíveis para todos os usuários
+/boot – contém os arquivos do kernel e do boot (inicialização) do sistema
+/dev – contém os arquivos referentes aos dispositivos externos
+/etc – contém os arquivos de configuração do sistema
+/home – contém diretórios pessoais dos usuários
+/lib – contém bibliotecas utilizadas pelos arquivos do diretório /bin
+/mnt – diretório de montagem (comando mount)
+/proc – contém informação sobre processos ativos
+/root – diretório raiz do usuário root
+/sbin – contém os arquivos dos comandos de superusuário
+/tmp – contém arquivos temporários, que são deletados se o sistema for desligado ou reiniciado
+/usr – contém os arquivos executáveis dos programas do sistema
+/var – contém arquivos variáveis, geralmente criados para armazenar informações de programas (cache, login de usuário, etc.)
+
+8. Ao listar o conteúdo de diretórios do Linux através de seu shell, é possível notar que existe uma nomenclatura de cores que diferenciam certos arquivos dos demais. Sendo assim, defina as características associadas com arquivos das seguintes cores (presumindo que a cor de fundo do sistema seja preta).
+Azul escuro – diretório
+Amarelo – arquivo de dispositivo externo
+Verde – executável
+Ciano – link simbólico (arquivo que aponta para outro arquivo ou diretório)
+Rosa – imagem/vídeo
+Branco – arquivo regular
+Vermelho – arquivo comprimido
+
+9. Qual a função dos comandos passwd, userdel e useradd no Linux?
+R: Trocar a senha de um usuário (ou sua própria, caso você não seja o superusuário), deletá-lo e adicionar um novo, respectivamente.
+
+10. Muitos comandos básicos do Linux são iguais ou ao menos similares aos do MS-DOS. Liste alguns desses comandos e detalhe suas respectivas funções.
+R: Três comandos similares entre o Linux e o DOS são o "cd", o "mkdir" e o "rmdir". Respectivamente, eles trocam o diretório no qual um usuário atualmente se encontra, criam um novo diretório e removem um diretório.
+
+11. O que é o vi/Vim? Podemos encontrá-lo em qualquer distribuição Linux/Unix?
+R: O vi é um editor de texto, sendo o Vim sua versão melhorada (vi improved). Sim, pode ser encontrado em qualquer distribuição Linux/Unix, mas talvez necessite de um download adicional ao invés de ser o editor padrão do sistema (por exemplo, em Debian, cujo editor padrão é o nano).
+
+12. Podemos editar arquivos em ASCII ou binário dentro do Vim?
+R: Sim, apesar de ser recomendado editar arquivos binários em modo hexadecimal (através do comando xxd) para evitar possíveis erros ou modificações acidentais.
+
+13. Ao utilizar o Linux, é possível acessar a documentação do sistema de diversas formas. Cite ao menos três, e detalhe suas respectivas características.
+R: Três comandos que permitem acessar a documentação Linux são o man, o help e o info. O help e o info são praticamente idênticos e fornecem uma versão encurtada do manual, já o man se difere por mostrar a informação na íntegra.
+
+14. Em sua opinião, qual dos métodos de acessar os arquivos de documentação do Linux é o mais conveniente para efeitos de pesquisa?
+R: O man, pois é mais completo e assim reduz a necessidade de consultar fontes externas.
+
+15. Qual a importância do comando mount no ambiente Linux/Unix?
+R: O comando mount é utilizado para montar dispositivos e sistemas de arquivos externos no Linux, através de um diretório que servirá como ponto de montagem. Isso permite o acesso a discos, pen drives e afins, por exemplo.
+
+16. O que significa a instrução umount, no Linux/Unix?
+R: A instrução umount desmonta um dispositivo ou sistema de arquivo que havia sido montado anteriormente. No caso de dispositivos como discos ou pen drives, teoricamente é possível apenas desconectá-los para obter o mesmo resultado, mas isso traz risco de perda de dados.
+
+17. Quais são os sistemas de arquivos suportados pelo Linux?
+R: O principal é o EXT4, mas também há suporte para BTRFS, XFS, NTFS, FAT, HFS, entre outros.
+
+18. Quais as semelhanças e diferenças entre os sistemas de arquivos encontrados nas distribuições Linux em relação aos seus equivalentes em Windows?
+R: O Windows utiliza NTFS e FAT, que são dois dos sistemas de arquivos com suporte em Linux. Em comparação aos sistemas exclusivos de Linux, estes dois possuem recursos como compressão e criptografia de arquivos de forma nativa, porém tendem a ter performance e estabilidade muito pior.
+
+19. Identifique a função dos comandos id, who, tail e userdel em Linux.
+R: id mostra a ID de um usuário dentro do sistema, who exibe os usuários que estão logados naquele determinado momento, userdel deleta um usuário e tail mostra as dez últimas linhas (a "cauda" de um arquivo).
+
+20. Ao utilizar sequencialmente os comandos cat /etc/shadow e cat /etc/passwd como usuário convencional, quais informações podem ser obtidas do sistema Linux?
+R: O arquivo /etc/passwd corresponde ao comando passwd (para troca de senha) e o arquivo /etc/shadow possui a senha (criptografada) dos usuários do sistema, enquanto o comando cat exibe o conteúdo de um arquivo. Como o usuário comum não deve poder acessar informações sensíveis, uma tentativa de utilizar cat /etc/shadow será barrada e não resultará em nada, enquanto cat /etc/passwd funcionará normalmente por se tratar de um comando acessível a todos.
+
+21. Por que é necessário efetuar o login como usuário root no sistema Linux para acessar certos comandos?
+R: Quando for necessário realizar alguma operação sensível na máquina, o usuário comum não possuirá autorização para tal por motivos de segurança. O usuário root é o administrador (ou superusuário), que está liberado para utilizar qualquer comando e realizar qualquer ação que se mostre necessária em algum determinado momento.
+
+22. O que acontece ao utilizar o comando ls -l no terminal Linux?
+R: O comando ls exibe os conteúdos de um diretório (incluindo outros diretórios), enquanto o parâmetro -l exibe detalhes sobre tais conteúdos. Por exemplo, data e hora da última modificação, tamanho do arquivo, permissões dos usuários em relação a um determinado arquivo, etc.
+
+23. Ao utilizar o Linux, é possível compactar arquivos de diversas formas. Cite ao menos três, e detalhe suas respectivas características.
+R: Três algoritmos de compactação de arquivo no Linux são o zip, o bzip e o gzip. O zip e o gzip compactam mais rápido, mas o bzip é mais eficiente na compactação (ou seja, resulta em um arquivo mais "leve").
+
+24. Explique o procedimento do comando tar no Linux.
+R: O tar aglutina vários arquivos em um só, contendo todos os dados em formato sequencial. Pode também ser combinado com um algoritmo de compactação, o que é comum em backups (arquivos tar.gz) e afins.
+
+25. Que sintaxe utilizamos no terminal Linux para listar o conteúdo de um arquivo .tar?
+R: tar -tf [nome do arquivo .tar] (ou tar -tvf [nome do arquivo .tar], para exibir com maiores detalhes)
+
+26. Qual ferramenta no Linux que é equivalente ao pkzip/pkunzip do Windows?
+R: Qualquer outro algoritmo de compactação (zip, gzip, bzip...)
+
+27. Qual o comando do Linux que permite aglutinar vários arquivos em um só?
+R: É o comando tar.
