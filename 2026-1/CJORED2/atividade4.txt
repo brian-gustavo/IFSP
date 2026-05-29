@@ -1,0 +1,19 @@
+1. Após um disquete ser formatado através do Linux e um sistema de arquivos EXT2 for criado nele, ele pode ser utilizado em quais sistemas operacionais?
+R: Em Linux, Windows e Mac, mas nos últimos dois casos, são necessárias ferramentas adicionais por falta de suporte nativo ao sistema de arquivos EXT2.
+
+2. Ao montar um disquete em um diretório (por exemplo, /mnt/floppy), montar um sistema de arquivo e copiar o arquivo /etc/nsswitch.conf nesse mesmo diretório, e então desmontar o disquete, por que nsswitch.conf não aparece mais no diretório?
+R: Pois tudo que é copiado em um diretório após um disquete ser montado nele vai para o disquete ao invés do disco rígido. O arquivo nsswitch.conf continua existindo, e pode ser visto novamente quando o disquete é remontado.
+
+3. Qual o significado dos seguintes elementos?
+/dev/sda5: diretório referente a um ... acoplado
+EXT3: um sistema de arquivos, da série EXT
+proc:
+
+4. O que é um sistema de arquivos (file system)?
+R: Um conjunto de regras e estruturas que organiza e gerencia dados em dispositivos de armazenamento, para permitir que um usuário acesse tais dados de forma intuitiva e conveniente.
+
+5. No comando "#mount /dev/fd0 /mnt/floppy", o que significam os dois argumentos?
+R: /dev/fd0 significa o dispositivo que será montado (nesse caso, um disquete, conforme indicado por "fd"), e /mnt/floppy é o ponto de montagem.
+
+6. Quais as diferenças entre o file system do Linux e o do Windows, se tratando dos drives?
+R: O Linux não possui drives. Quando um novo dispositivo é acoplado, ele deve ser integrado à árvore geral de diretórios através do comando mount. Enquanto isso, no Windows, um dispositivo é imediatamente designado em um drive específico após ser acoplado.
