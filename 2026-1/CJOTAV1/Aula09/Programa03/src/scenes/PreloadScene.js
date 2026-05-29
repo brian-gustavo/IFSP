@@ -13,21 +13,21 @@ export default class PreloadScene extends Phaser.Scene {
 
         this.load.spritesheet(
             'player',
-            'assets/images/enemy/player_spritesheet.png',
+            'assets/images/spritesheets/player_spritesheet.png', // Corrigido a pasta para spritesheets
             {
                 frameWidth: 32,
                 frameHeight: 32
             }
-        )
+        );
 
         this.load.spritesheet(
             'enemy',
-            'assets/images/enemy/enemy_spritesheet.png',
+            'assets/images/spritesheets/enemy_spritesheet.png', // Corrigido a pasta para spritesheets
             {
                 frameWidth: 288,
                 frameHeight: 160
             }
-        )
+        );
     }
 
     create() {

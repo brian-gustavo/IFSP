@@ -9,7 +9,7 @@ const HEIGHT = 700;
 const SHARED_CONFIG = {
     width: WIDTH,
     height: HEIGHT,
-    debug: true
+    debug: false
 }
 
 const SCENES = [
@@ -26,11 +26,11 @@ const config = {
     ...SHARED_CONFIG,
     backgroundColor: '#0080ff',
     parent: 'game-container',
-    pixelArt: false,
+    pixelArt: true,
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: {y: 0},
+            gravity: { y: 500 },
             debug: SHARED_CONFIG['debug'],
         }
     },
