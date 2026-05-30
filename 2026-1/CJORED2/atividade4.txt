@@ -5,9 +5,9 @@ R: Em Linux, Windows e Mac, mas nos últimos dois casos, são necessárias ferra
 R: Pois tudo que é copiado em um diretório após um disquete ser montado nele vai para o disquete ao invés do disco rígido. O arquivo nsswitch.conf continua existindo, e pode ser visto novamente quando o disquete é remontado.
 
 3. Qual o significado dos seguintes elementos?
-/dev/sda5: diretório referente a um ... acoplado
+/dev/sda5: diretório referente a um disco rígido acoplado
 EXT3: um sistema de arquivos, da série EXT
-proc:
+proc: sistema de arquivos virtual (não ocupa espaço no disco rígido, e sim na memória RAM)
 
 4. O que é um sistema de arquivos (file system)?
 R: Um conjunto de regras e estruturas que organiza e gerencia dados em dispositivos de armazenamento, para permitir que um usuário acesse tais dados de forma intuitiva e conveniente.
