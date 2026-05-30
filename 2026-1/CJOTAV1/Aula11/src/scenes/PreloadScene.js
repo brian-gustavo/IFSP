@@ -9,16 +9,26 @@ export default class PreloadScene extends Phaser.Scene {
         this.displayProgressBar();
 
         this.load.image('background', 'assets/images/background.png');
-        this.load.image('player', 'assets/images/player.png');
-        this.load.image('idle1', 'assets/images/player01.png');
-        this.load.image('idle2', 'assets/images/player02.png');
         this.load.image('coca', 'assets/images/coca.png');
+
+        this.load.spritesheet(
+            'player',
+            'assets/images/pokelino-spritesheet.png',
+            {
+                frameWidth: 424,
+                frameHeight: 317
+            }
+        );
 
         this.load.bitmapFont(
             'pokelino',
             'assets/fonts/pokelino/pokelino.png',
             'assets/fonts/pokelino/pokelino.xml'
-        )
+        );
+
+        this.load.audio('gameMusic', 'assets/music/game-music.mp3');
+        this.load.audio('collisionSound', 'assets/music/collision-sound.mp3')
+        this.load.audio('tiredSound', 'assets/music/tired-sound.mp3')
     }
 
     create() {
