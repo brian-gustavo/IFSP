@@ -15,6 +15,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
         this.setCollideWorldBounds(true);
         
+        this.setScale(0.5);
+        
         this.setGravityY(500);
         this.playerSpeed = 200;
         this.jumpForce = 450;
