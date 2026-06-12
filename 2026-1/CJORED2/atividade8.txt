@@ -1,0 +1,8 @@
+1. Qual o significado dos seguintes parâmetros: ServerRoot, MaxClients, User, Group, ServerAdmin e DocumentRoot? Qual o valor deles na configuração padrão do Apache para o Debian?
+R: ServerRoot é o diretório que serve como base pro Apache no sistema, com todos os caminhos relativos sendo calculados a partir dele. Seu valor padrão é /etc/apache2.
+   MaxClients (ou MaxRequestWorkers, em versões mais recentes do Apache) define o número de requisições simultâneas que o Apache pode atender. O valor padrão costuma estar na faixa entre 150 e 250. 
+   User e Group são o usuário e o grupo, respectivamente, que controlam o Apache. O valor padrão é www-data para ambos, mas ele inicia como root para poder usar a porta 80.
+   ServerAdmin é o endereço de email exibido aos usuários caso haja um erro. O valor padrão é webmaster@localhost.
+   E por fim, DocumentRoot é a pasta onde os arquivos do site serão armazenados por padrão, para serem enviados ao navegador. Seu valor padrão é /var/www/html.
+
+Observação: os demais exercícios foram feitos, mas como são práticos, seus resultados não puderam ser mostrados aqui.
