@@ -1,0 +1,35 @@
+1. Ao executar o comando "urpmq apache" no terminal do Linux, o que ocorre?
+R:
+
+2. Quantos pacotes são necessários para instalar o Apache?
+R:
+
+3. O que significa a designação .i586?
+R:
+
+4. Qual o espaço em disco necessário para instalar o Apache?
+R:
+
+5. Ao instalar o Apache no Linux, qual sua versão?
+R:
+
+6. Quais os módulos presentes na instalação do Apache?
+R:
+
+7. Ao executar o comando "find / -name httpd.conf -print", qual a posição do arquivo apresentada pelo sistema?
+R:
+
+8. Após instalar o Apache, qual o resultado obtido ao executar o comando "service httpd start"?
+R:
+
+9. Ao iniciar o servidor Apache e inserir "localhost" no navegador, o que acontece?
+R:
+
+10. Ao alterar o arquivo /var/www/html/index.html e refazer a instrução do exercício anterior, quais as mudanças observáveis?
+R:
+
+11. Qual a função dos seguintes comandos: urpmf, service httpd start, urpmq e apt-get remove?
+R:
+
+12. Quais as funcionalidades e características de um servidor web?
+R:
