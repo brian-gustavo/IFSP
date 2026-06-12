@@ -1,32 +1,32 @@
 1. Ao executar o comando "urpmq apache" no terminal do Linux, o que ocorre?
-R:
+R: Em Debian, não ocorre nada, pois esse era um comando específico do Mandriva. Mais detalhes sobre o comando no exercício 11.
 
 2. Quantos pacotes são necessários para instalar o Apache?
-R:
+R: Apenas um, que é o apache2.
 
 3. O que significa a designação .i586?
-R:
+R: Indica que o software foi compilado especificamente para rodar em processadores com arquitetura de quinta geração da Intel (classe Pentium), ou processadores compatíveis de outros fabricantes.
 
 4. Qual o espaço em disco necessário para instalar o Apache?
-R:
+R: Pode variar dependendo de alguns fatores, mas geralmente não é necessário mais do que 60MB no máximo.
 
 5. Ao instalar o Apache no Linux, qual sua versão?
-R:
+R: A versão maior atualmente é a versão 2.4. Porém, a subversão pode variar dependendo da versão da distro sendo utilizada.
 
 6. Quais os módulos presentes na instalação do Apache?
-R:
+R: Existem vários, mas os que estão ativados por padrão são mod_core, mod_so, mod_authn_core, mod_authz_core, mod_dir, mod_mime, mod_log_config e mod_alias.
 
 7. Ao executar o comando "find / -name httpd.conf -print", qual a posição do arquivo apresentada pelo sistema?
-R:
+R: Atualmente, o arquivo httpd.conf não é mais utilizado pelo Apache, portanto o sistema apresenta apenas um erro.
 
 8. Após instalar o Apache, qual o resultado obtido ao executar o comando "service httpd start"?
-R:
+R: Devido ao que foi descrito no exercício 7, o comando também não funciona atualmente. Portanto, o resultado obtido é um erro.
 
 9. Ao iniciar o servidor Apache e inserir "localhost" no navegador, o que acontece?
-R:
+R: É exibido no navegador o conteúdo do arquivo index.html que é criado por padrão no diretório /var/www/html.
 
 10. Ao alterar o arquivo /var/www/html/index.html e refazer a instrução do exercício anterior, quais as mudanças observáveis?
-R:
+R: As alterações feitas no arquivo passam a ser implementadas na prática, e podem ser observadas pelo usuário.
 
 11. Qual a função dos seguintes comandos: urpmf, service httpd start, urpmq e apt-get remove?
 R:
