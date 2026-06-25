@@ -29,7 +29,7 @@ R: É exibido no navegador o conteúdo do arquivo index.html que é criado por p
 R: As alterações feitas no arquivo passam a ser implementadas na prática, e podem ser observadas pelo usuário.
 
 11. Qual a função dos seguintes comandos: urpmf, service httpd start, urpmq e apt-get remove?
-R:
+R: urpmf busca qual pacote contém um determinado arquivo, service httpd start inicia o servidor Apache, urpmq faz consultas no banco de dados de pacotes do sistema e apt-get remove desinstala um pacote do sistema. Vale a pena notar que os três primeiros comandos estão desatualizados e não são mais suportados atualmemte.
 
 12. Quais as funcionalidades e características de um servidor web?
-R:
+R: Essencialmente, um servidor web é um sistema responsável por aceitar requisições feitas por clientes a uma aplicação web e retornar um determinado resultado. Suas funcionalidades incluem processar o protocolo HTTP (incluindo a versão com criptografia, o HTTPS), se comunicar com serviços externos quando necessário para entregar conteúdo ao usuário, manter conexões concorrentes funcionando simultaneamente, gerenciar certificados digitais, registrar logs, etc.
