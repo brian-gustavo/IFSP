@@ -23,6 +23,11 @@ export default class GameScene extends Phaser.Scene {
         this.createBackground();
         this.createPlayer();
 
+        this.music = this.sound.add('soundtrack', { loop: true, volume: 0.2 });
+        this.music.play();
+
+        this.collectSound = this.sound.add('collect', { volume: 0.1 });
+
         this.remedios = this.physics.add.group();
 
         this.time.addEvent({
@@ -33,17 +38,17 @@ export default class GameScene extends Phaser.Scene {
         });
 
         this.physics.add.overlap(
-            this.player, 
-            this.remedios, 
-            this.coletarRemedio, 
-            null, 
+            this.player,
+            this.remedios,
+            this.coletarRemedio,
+            null,
             this
         );
 
         this.scoreText = this.add.text(20, 20, 'Pontos: 0', {
             fontSize: '32px',
+            fontFamily: 'Pixelta, Arial, sans-serif',
             fill: '#ffffff',
-            fontFamily: 'Arial, sans-serif',
             stroke: '#000000',
             strokeThickness: 4
         });
@@ -99,8 +104,9 @@ export default class GameScene extends Phaser.Scene {
     coletarRemedio(player, remedio) {
         remedio.destroy();
 
-        this.score += 1;
+        this.collectSound.play();
 
+        this.score += 1;
         this.scoreText.setText('Pontos: ' + this.score);
     }
 }

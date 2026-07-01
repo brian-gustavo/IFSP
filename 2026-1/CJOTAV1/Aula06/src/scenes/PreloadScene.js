@@ -12,10 +12,27 @@ export default class PreloadScene extends Phaser.Scene {
         this.load.image('player', 'assets/images/garota.png');
         this.load.image('caixa', 'assets/images/caixa_remedio.png');
         this.load.image('cartela', 'assets/images/cartela_remedio.png');
+
+        this.load.audio('soundtrack', 'assets/music/soundtrack.mp3');
+        this.load.audio('collect', 'assets/sounds/collect_item.mp3');
     }
 
     create() {
-        this.scene.start('GameScene');
+        this.loadCustomFont().then(() => {
+            this.scene.start('GameScene');
+        });
+    }
+
+    loadCustomFont() {
+        const font = new FontFace('Pixelta', 'url(assets/fonts/pixelta.ttf)');
+
+        return font.load()
+            .then((loadedFont) => {
+                document.fonts.add(loadedFont);
+            })
+            .catch((err) => {
+                console.error('Erro ao carregar a fonte Pixelta:', err);
+            });
     }
 
     displayProgressBar() {

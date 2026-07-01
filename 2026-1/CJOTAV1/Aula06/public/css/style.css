@@ -28,3 +28,8 @@ body {
   position: relative;
   border: 0px solid red;
 }
+
+@font-face {
+    font-family: 'Pixelta';
+    src: url('assets/fonts/pixelta.ttf') format('truetype');
+}
