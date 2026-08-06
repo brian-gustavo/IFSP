@@ -1,0 +1,10 @@
+Primeiro conjunto: ícones de redes sociais (Facebook, Instagram, YouTube...)
+Posição na tela: No header, abaixo da barra de pesquisa
+Princípio da Gestalt que se aplica: Semelhança, continuidade e proximidade (são todos pequenos quadrados, próximos e ordenados em uma linha)
+
+Segundo conjunto: vídeos institucionais
+Posição na tela: logo acima do footer
+Princípio da Gestalt que se aplica: Semelhança, continuidade e proximidade (todos possuem o mesmo formato, próximos um do outro e ordenados em linha)
+
+Conjunto onde o agrupamento não corresponde à relação: Entre as notícias e o elemento "destaque", o botão de "mais notícias" aparece abaixo da caixa de notícias (como se estivesse agrupado com o "destaque" e não com as notícias)
+Como alterar: Colocar o botão dentro da caixa de notícias
