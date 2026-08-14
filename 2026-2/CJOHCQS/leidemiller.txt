@@ -1,0 +1,7 @@
+Tarefa escolhida: responder uma mensagem no WhatsApp (com texto)
+
+Descrição resumida: ouvir a notificação que indica uma nova mensagem recebida, abrir o aplicativo, clicar na conversa desejada, clicar na barra de "Mensagem" (que fica na parte inferior da tela), digitar a mensagem e clicar no botão verde com uma seta apontando pra direita (à direita do texto digitado)
+
+O que a tarefa exige em termos de retenção de memória: a princípio, seria necessário reter as informações referentes ao funcionamento do aplicativo (saber que o botão verde com a seta serve para enviar a mensagem, por exemplo), mas com o tempo isso se torna algo que o usuário "decora"; o conteúdo da mensagem não necessita ser decorado em tempos atuais, pois o WhatsApp possui uma função que guarda o conteúdo digitado como rascunho mesmo que o usuário saia da conversa
+
+O trecho da tarefa que mais depende da memória de curta duração, e o que aconteceria ao ser interrompido no momento de executá-lo: teoricamente seria o envio da mensagem, mas em decorrência da funcionalidade supracitada, caso haja uma interrupção basta apenas continuar a mensagem de onde ela havia parado
