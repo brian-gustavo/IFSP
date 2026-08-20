@@ -1,0 +1,33 @@
+Tarefa: descobrir o preço total de ida e volta mais barato em uma viagem de avião de São Paulo para Fortaleza, saindo 7/12/2026 e voltando 14/12/2026, para uma pessoa e com bagagem despachada
+
+SITE KAYAK - LAYOUT DE PC
+
+Dificuldade para realizar a tarefa: 2/10 – o site é bem intuitivo de modo geral, mas não sou familiarizado com alguns termos da área da aviação então tive dificuldade de entendê-los a princípio
+
+Dificuldade para entender o que a tela mostrava: 1/10 – seria um valor maior se eu não soubesse inglês pois essa é a linguagem padrão do site e a opção de trocar é um pouco "escondida", mas de resto, o visual do site está bem organizado
+
+Dificuldade para confiar que o valor estava correto: 1/10 – presumindo que o site como um todo seja confiável, não há muito motivo para desconfiar que o valor está errado de alguma forma (ao tentar terminar a compra, ele redirecionou pra outro site que mostrava o mesmo preço; imagino que o Kayak seja um agregador e é nos outros sites onde a compra realmente é feita)
+
+KAYAK - LAYOUT DE SMARTPHONE (e mudando para Fortaleza -> São Paulo)
+
+Dificuldade para realizar a tarefa: 1/10 – a partir do estado da etapa anterior, foi fácil fazer o processo inverso pois o site possui recursos intuitivos para isso
+
+Dificuldade para entender o que a tela mostrava: 1/10 – o site está bem otimizado para smartphones; é perfeitamente possível se guiar por ele da mesma forma que no layout de PC
+
+Dificuldade para confiar que o valor estava correto: 1/10 – mesma coisa de antes
+
+SITE DA LATAM - LAYOUT DE PC
+
+Dificuldade para realizar a tarefa: 3/10 – ao entrar pela primeira vez, a tela inicial não me mostrou a pesquisa filtrada de voos por algum motivo, então tive dificuldade em achar as informações necessárias por outras áreas do site; posteriormente, porém, o site também é bem intuitivo
+
+Dificuldade para entender o que a tela mostrava: 1/10 – além do site ser intuitivo, ele também está em português por padrão
+
+Dificuldade para confiar que o valor estava correto: 1/10 – mesma coisa de antes
+
+SITE DA LATAM - LAYOUT DE SMARTPHONE (e invertendo a rota)
+
+Dificuldade para realizar a tarefa: 1/10 – assim como no site da Kayak, é fácil fazer o processo inverso a partir do estado da etapa anterior
+
+Dificuldade para entender o que a tela mostrava: 1/10 – o site também está bem otimizado para smartphone, assim como o Kayak
+
+Dificuldade para confiar que o valor estava correto: 1/10 – mesma coisa de antes
