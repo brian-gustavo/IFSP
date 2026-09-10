@@ -1,1 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal do Estudante - Boletim Escolar</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --card-bg: #1e1e1e;
+      --card-border: #333333;
+      --text-primary: #f5f5f5;
+      --text-secondary: #b0bec5;
+      --primary-color: #2e7d32;
+      --primary-hover: #388e3c;
+      --error-color: #ff6b6b;
+      --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
 
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-color);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: var(--card-bg);
+      border-bottom: 2px solid var(--primary-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-title { font-size: 1.25rem; font-weight: bold; text-transform: uppercase; }
+
+    nav ul { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
+    nav a { color: var(--text-secondary); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+    nav a.active { color: var(--text-primary); border-bottom: 2px solid var(--primary-color); }
+
+    .btn-logout {
+      background-color: transparent;
+      border: 1px solid var(--error-color);
+      color: var(--error-color);
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    main {
+      flex: 1;
+      max-width: 900px;
+      width: 100%;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .header-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-title {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      border-left: 4px solid var(--primary-color);
+      padding-left: 0.75rem;
+    }
+
+    .btn-add {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      padding: 0.6rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .btn-add:hover { background-color: var(--primary-hover); }
+
+    .table-container {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      overflow-x: auto;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th, td { padding: 1rem; border-bottom: 1px solid var(--card-border); }
+
+    thead th {
+      background-color: #282828;
+      color: var(--text-primary);
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    tbody tr:hover { background-color: rgba(255, 255, 255, 0.02); }
+
+    .btn-info {
+      background: none;
+      border: none;
+      color: #80d8ff;
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 0.85rem;
+      margin-left: 0.5rem;
+    }
+
+    tfoot tr { background-color: #252525; font-weight: bold; }
+    tfoot td { border-top: 2px solid var(--primary-color); border-bottom: none; }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .modal-overlay.active { display: flex; }
+
+    .modal-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      width: 100%;
+      max-width: 400px;
+      padding: 1.5rem;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.5rem;
+    }
+
+    .btn-close {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand-title">PORTAL DO ESTUDANTE</div>
+    <nav aria-label="Navegação Principal">
+      <ul>
+        <li><a href="boletim.html" class="active">BOLETIM</a></li>
+        <li><a href="login.html" class="btn-logout">SAIR</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="header-actions">
+      <h1 class="page-title">BOLETIM - PERÍODO 2026.1</h1>
+      <a href="nova_materia.html" class="btn-add">+ CRIAR NOVA MATÉRIA</a>
+    </div>
+
+    <div class="table-container">
+      <table aria-label="Boletim Escolar">
+        <thead>
+          <tr>
+            <th scope="col">TIPO DE INFORMAÇÃO / MATÉRIA</th>
+            <th scope="col">NUM. PRESENÇAS</th>
+            <th scope="col">NOTA DO PERÍODO</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaCorpo">
+          <tr>
+            <td>
+              INFORMAÇÕES DA MATÉRIA 1
+              <button class="btn-info" onclick="abrirModal('Prof. Carlos Silva', 'carlos@escola.edu.br')">(Ver Professor)</button>
+            </td>
+            <td>95% (38 aulas)</td>
+            <td>8.5</td>
+          </tr>
+          <tr>
+            <td>
+              INFORMAÇÕES DA MATÉRIA 2
+              <button class="btn-info" onclick="abrirModal('Prof.ª Ana Souza', 'ana@escola.edu.br')">(Ver Professor)</button>
+            </td>
+            <td>100% (40 aulas)</td>
+            <td>9.0</td>
+          </tr>
+          <tr>
+            <td>
+              INFORMAÇÕES DA MATÉRIA 3
+              <button class="btn-info" onclick="abrirModal('Prof. Roberto Lima', 'roberto@escola.edu.br')">(Ver Professor)</button>
+            </td>
+            <td>88% (35 aulas)</td>
+            <td>7.5</td>
+          </tr>
+          <tr>
+            <td>
+              INFORMAÇÕES DA MATÉRIA 4
+              <button class="btn-info" onclick="abrirModal('Prof.ª Maria Clara', 'maria@escola.edu.br')">(Ver Professor)</button>
+            </td>
+            <td>92% (37 aulas)</td>
+            <td>8.0</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row">TOTAL</th>
+            <td>MÉDIA DE PRESENÇA: 93.75%</td>
+            <td>MÉDIA DAS NOTAS: 8.25</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="modalProf">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="profNome" style="font-size: 1.1rem;">DOCENTE</h2>
+        <button class="btn-close" onclick="fecharModal()">&times;</button>
+      </div>
+      <p id="profEmail" style="color: var(--text-secondary); margin-top: 0.5rem;"></p>
+    </div>
+  </div>
+
+  <script>
+    function abrirModal(nome, email) {
+      document.getElementById('profNome').innerText = nome;
+      document.getElementById('profEmail').innerText = "E-mail de contato: " + email;
+      document.getElementById('modalProf').classList.add('active');
+    }
+
+    function fecharModal() {
+      document.getElementById('modalProf').classList.remove('active');
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const novaMat = urlParams.get('materia');
+    const novoProf = urlParams.get('prof');
+
+    if (novaMat) {
+      const tbody = document.getElementById('tabelaCorpo');
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>
+          ${novaMat.toUpperCase()}
+          <button class="btn-info" onclick="abrirModal('${novoProf || 'Prof. Não informado'}', 'docente@escola.edu.br')">(Ver Professor)</button>
+        </td>
+        <td>100% (40 aulas)</td>
+        <td>10.0</td>
+      `;
+      tbody.appendChild(tr);
+    }
+  </script>
+</body>
+</html>
