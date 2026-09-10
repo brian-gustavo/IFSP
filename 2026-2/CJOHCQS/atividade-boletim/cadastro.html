@@ -9,26 +9,19 @@
       --bg-color: #121212;
       --card-bg: #1e1e1e;
       --card-border: #333333;
-      
       --text-primary: #f5f5f5;
       --text-secondary: #b0bec5;
-      
       --primary-color: #2e7d32;
       --primary-hover: #388e3c;
       --primary-text: #ffffff;
-      
+      --info-text: #81c784;
       --error-color: #ff6b6b;
       --error-bg: rgba(255, 107, 107, 0.1);
-      
       --focus-outline: #80d8ff;
-      --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: var(--font-family);
@@ -58,7 +51,6 @@
       color: var(--text-primary);
       margin-bottom: 1.5rem;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
       border-bottom: 2px solid var(--primary-color);
       padding-bottom: 0.5rem;
     }
@@ -83,7 +75,11 @@
       color: var(--text-primary);
       border: 1px solid var(--card-border);
       border-radius: 4px;
-      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-group input.has-error {
+      border-color: var(--error-color);
+      background-color: var(--error-bg);
     }
 
     .form-group input:focus {
@@ -91,9 +87,12 @@
       border-color: var(--focus-outline);
     }
 
-    .form-group input[aria-invalid="true"] {
-      border-color: var(--error-color);
-      background-color: var(--error-bg);
+    .info-message {
+      color: var(--info-text);
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-top: 0.4rem;
+      display: block;
     }
 
     .error-message {
@@ -102,10 +101,6 @@
       font-weight: 600;
       margin-top: 0.4rem;
       display: none;
-    }
-
-    .error-message.active {
-      display: block;
     }
 
     .btn-submit {
@@ -119,16 +114,9 @@
       font-weight: bold;
       cursor: pointer;
       margin-top: 0.5rem;
-      transition: background-color 0.2s;
     }
 
-    .btn-submit:hover {
-      background-color: var(--primary-hover);
-    }
-
-    .btn-submit:focus-visible {
-      outline: 3px solid var(--focus-outline);
-    }
+    .btn-submit:hover { background-color: var(--primary-hover); }
 
     .auth-link {
       display: block;
@@ -139,88 +127,31 @@
       text-decoration: underline;
       font-weight: 600;
     }
-
-    .auth-link:hover {
-      color: #a5d6a7;
-    }
-
-    .auth-link:focus-visible {
-      outline: 3px solid var(--focus-outline);
-      border-radius: 2px;
-    }
-
-    .demo-controls {
-      margin-top: 2rem;
-      padding: 0.75rem 1rem;
-      background: #2a2a2a;
-      border: 1px dashed var(--card-border);
-      border-radius: 6px;
-      font-size: 0.85rem;
-      text-align: center;
-      color: var(--text-secondary);
-    }
-
-    .demo-controls button {
-      margin-top: 0.5rem;
-      padding: 0.4rem 0.8rem;
-      background: #333;
-      color: var(--text-primary);
-      border: 1px solid var(--card-border);
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .demo-controls button:hover {
-      background: #444;
-    }
   </style>
 </head>
-<body>
 
+<body>
   <main class="register-card">
     <h1>Portal do Estudante</h1>
 
-    <form id="registerForm" action="boletim.html" method="GET" novalidate>
+    <form id="registerForm" novalidate>
       <div class="form-group">
         <label for="username">USUÁRIO</label>
-        <input 
-          type="text" 
-          id="username" 
-          name="username" 
-          required 
-          autocomplete="username"
-          aria-required="true"
-        >
+        <input type="text" id="username" name="username" required autocomplete="username">
       </div>
 
       <div class="form-group">
         <label for="password">SENHA</label>
-        <input 
-          type="password" 
-          id="password" 
-          name="password" 
-          required 
-          autocomplete="new-password"
-          aria-required="true"
-        >
-        <span id="password-error" class="error-message" role="alert">
-          SENHA MUITO SIMPLES. USE UMA MAIS COMPLEXA.
-        </span>
+        <input type="password" id="password" name="password" required autocomplete="new-password">
+        <span id="password-info" class="info-message">Use ao menos um número e uma letra maiúscula.</span>
+        <span id="password-error" class="error-message" role="alert">SENHA MUITO SIMPLES. USE UMA MAIS COMPLEXA.</span>
       </div>
 
       <div class="form-group">
         <label for="email">EMAIL</label>
-        <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          required 
-          autocomplete="email"
-          aria-required="true"
-        >
-        <span id="email-error" class="error-message" role="alert">
-          EMAIL INEXISTENTE.
-        </span>
+        <input type="email" id="email" name="email" required autocomplete="email">
+        <span id="email-info" class="info-message">O e-mail deve conter ao menos uma "@" e um ponto.</span>
+        <span id="email-error" class="error-message" role="alert">EMAIL INVÁLIDO.</span>
       </div>
 
       <button type="submit" class="btn-submit">FAZER CADASTRO</button>
@@ -228,46 +159,53 @@
 
     <a href="login.html" class="auth-link">JÁ TEM CONTA? FAÇA LOGIN!</a>
   </main>
-
-  <aside class="demo-controls" aria-label="Controles de demonstração">
-    <p><strong>Simulador de Estados do PDF:</strong></p>
-    <button type="button" onclick="toggleErros()">Alternar Mensagens de Erro</button>
-  </aside>
-
   <script>
     const form = document.getElementById('registerForm');
     const passInput = document.getElementById('password');
     const emailInput = document.getElementById('email');
-    const passError = document.getElementById('password-error');
-    const emailError = document.getElementById('email-error');
+
+    const passInfo = document.getElementById('password-info');
+    const passErr = document.getElementById('password-error');
+    const emailInfo = document.getElementById('email-info');
+    const emailErr = document.getElementById('email-error');
 
     form.addEventListener('submit', function(e) {
-      if (passError.classList.contains('active') || emailError.classList.contains('active')) {
-        e.preventDefault();
-        alert("Corrija os erros apontados antes de prosseguir.");
+      e.preventDefault();
+
+      passInput.classList.remove('has-error');
+      emailInput.classList.remove('has-error');
+      passErr.style.display = 'none';
+      passInfo.style.display = 'block';
+      emailErr.style.display = 'none';
+      emailInfo.style.display = 'block';
+
+      const passVal = passInput.value;
+      const emailVal = emailInput.value.trim();
+
+      const temMaiuscula = /[A-Z]/.test(passVal);
+      const temNumero = /[0-9]/.test(passVal);
+      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      let temErro = false;
+
+      if (!temMaiuscula || !temNumero) {
+        passInput.classList.add('has-error');
+        passInfo.style.display = 'none';
+        passErr.style.display = 'block';
+        temErro = true;
+      }
+
+      if (!regexEmail.test(emailVal)) {
+        emailInput.classList.add('has-error');
+        emailInfo.style.display = 'none';
+        emailErr.style.display = 'block';
+        temErro = true;
+      }
+
+      if (!temErro) {
+        window.location.href = 'boletim.html';
       }
     });
-
-    function toggleErros() {
-      const isErrorActive = passError.classList.contains('active');
-      
-      if (!isErrorActive) {
-        passError.classList.add('active');
-        emailError.classList.add('active');
-        passInput.setAttribute('aria-invalid', 'true');
-        passInput.setAttribute('aria-describedby', 'password-error');
-        emailInput.setAttribute('aria-invalid', 'true');
-        emailInput.setAttribute('aria-describedby', 'email-error');
-      } else {
-        passError.classList.remove('active');
-        emailError.classList.remove('active');
-        passInput.removeAttribute('aria-invalid');
-        passInput.removeAttribute('aria-describedby');
-        emailInput.removeAttribute('aria-invalid');
-        emailInput.removeAttribute('aria-describedby');
-      }
-    }
   </script>
-
 </body>
 </html>
