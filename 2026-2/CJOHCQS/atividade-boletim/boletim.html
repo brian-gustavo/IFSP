@@ -245,19 +245,11 @@
   </div>
 
   <script>
-    function abrirModal(nome, email) {
-      document.getElementById('profNome').innerText = nome;
-      document.getElementById('profEmail').innerText = "Email de contato: " + email;
-      document.getElementById('modalProf').classList.add('active');
-    }
-
-    function fecharModal() {
-      document.getElementById('modalProf').classList.remove('active');
-    }
-
     const urlParams = new URLSearchParams(window.location.search);
     const novaMat = urlParams.get('materia');
     const novoProf = urlParams.get('prof');
+    const novasPresencas = urlParams.get('presencas') || '100% (40 aulas)';
+    const novaNota = urlParams.get('nota') || '10.0';
 
     if (novaMat) {
       const tbody = document.getElementById('tabelaCorpo');
@@ -267,8 +259,8 @@
           ${novaMat.toUpperCase()}
           <button class="btn-info" onclick="abrirModal('${novoProf || 'Prof. Não Informado'}', 'docente@escola.edu.br')">(Ver professor)</button>
         </td>
-        <td>100% (40 aulas)</td>
-        <td>10.0</td>
+        <td>${novasPresencas}</td>
+        <td>${parseFloat(novaNota).toFixed(1)}</td>
       `;
       tbody.appendChild(tr);
     }
