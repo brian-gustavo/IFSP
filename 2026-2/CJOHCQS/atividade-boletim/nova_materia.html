@@ -79,6 +79,15 @@
       flex-direction: column;
     }
 
+    .form-row {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .form-row .form-group {
+      flex: 1;
+    }
+
     .form-group label {
       font-weight: 600;
       font-size: 0.9rem;
@@ -140,6 +149,18 @@
         <div class="form-group">
           <label for="prof">NOME DO PROFESSOR</label>
           <input type="text" id="prof" name="prof" required placeholder="Ex: Prof. João Oliveira">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="presencas">NUM. PRESENÇAS</label>
+            <input type="text" id="presencas" name="presencas" required placeholder="Ex: 100% (40 aulas)">
+          </div>
+
+          <div class="form-group">
+            <label for="nota">NOTA DO PERÍODO</label>
+            <input type="number" id="nota" name="nota" step="0.1" min="0" max="10" required placeholder="Ex: 8.5">
+          </div>
         </div>
 
         <button type="submit" class="btn-submit">SALVAR MATÉRIA</button>
